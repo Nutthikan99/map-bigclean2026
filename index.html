@@ -2770,7 +2770,7 @@ footer p{color:rgba(255,255,255,.3);font-size:.78em;margin:0}
   <!-- Header -->
   <div style="text-align:center;padding:3em 2em .8em">
     <h2 class="section-title light">เลือกดูตลาด</h2>
-    <p style="color:rgba(255,255,255,.5);font-size:.88em;margin-top:-.3em">คลิกที่ตลาดเพื่อดูแผนที่สาขาและนำทาง — หรือดูทุกตลาดพร้อมกันบนแผนที่</p>
+    <p style="color:rgba(255,255,255,.5);font-size:.88em;margin-top:-.3em">คลิกที่ตลาดหรือ <strong style="color:#92c500">ชื่อจังหวัด</strong> เพื่อเปิดแผนที่สาขาในจังหวัดนั้นทันที</p>
   </div>
 
   <!-- Filter tabs -->
@@ -2781,52 +2781,45 @@ footer p{color:rgba(255,255,255,.3);font-size:.78em;margin:0}
     <button class="mkt-tab" data-market="3" onclick="filterMap(this,'3')" style="padding:.45em 1.2em;border-radius:50px;border:1px solid rgba(0,184,148,.4);background:rgba(0,184,148,.12);color:#00d4a8;font-family:Inter,Sarabun,sans-serif;font-weight:700;font-size:.82em;cursor:pointer;transition:all .2s">🟢 ตลาด 3 (129)</button>
   </div>
 
-  <!-- Map + Panel layout — height 680px -->
+  <!-- Map + Panel layout -->
   <div style="display:flex;gap:0;height:680px;border-top:1px solid rgba(255,255,255,.08)">
 
     <!-- LEFT: Mini Leaflet Map -->
     <div id="overview-map" style="flex:1;min-width:0;z-index:1"></div>
 
-    <!-- RIGHT: Market panel (scrollable) -->
+    <!-- RIGHT: Market panel -->
     <div style="width:360px;flex-shrink:0;background:#011e30;display:flex;flex-direction:column;border-left:1px solid rgba(255,255,255,.08);overflow-y:auto;scrollbar-width:thin;scrollbar-color:#1e3a4a transparent">
 
       <!-- ═══ ตลาด 1 ═══ -->
       <div class="mkt-panel" data-market="1" style="border-bottom:2px solid rgba(255,255,255,.06)">
         <div style="padding:1.1em 1.3em .9em">
-          <!-- Title row -->
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:.5em">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:.6em">
             <div style="width:12px;height:12px;border-radius:50%;background:#e05a20;flex-shrink:0;box-shadow:0 0 8px #e05a20"></div>
             <div style="font-size:1em;font-weight:800;color:#fff">ตลาด 1 — กรุงเทพฯ + ปริมณฑล</div>
             <div style="margin-left:auto;font-size:1.6em;font-weight:900;color:#e05a20;line-height:1">202</div>
           </div>
-          <!-- BK row -->
-          <div style="margin-bottom:.6em">
-            <div style="font-size:.68em;font-weight:700;color:rgba(224,90,32,.9);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35em">
-              🟠 BK — 96 สาขา · 4 จังหวัด
-            </div>
+          <div style="margin-bottom:.55em">
+            <div style="font-size:.68em;font-weight:700;color:rgba(224,90,32,.9);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35em">🟠 BK — 96 สาขา · 4 จังหวัด</div>
             <div style="display:flex;gap:.35em;flex-wrap:wrap">
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(224,90,32,.12);color:rgba(224,90,32,1);border:1px solid rgba(224,90,32,.3);white-space:nowrap">กรุงเทพมหานคร<span style="opacity:.5;margin-left:2px">(56)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(224,90,32,.12);color:rgba(224,90,32,1);border:1px solid rgba(224,90,32,.3);white-space:nowrap">สมุทรปราการ<span style="opacity:.5;margin-left:2px">(20)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(224,90,32,.12);color:rgba(224,90,32,1);border:1px solid rgba(224,90,32,.3);white-space:nowrap">ปทุมธานี<span style="opacity:.5;margin-left:2px">(19)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(224,90,32,.12);color:rgba(224,90,32,1);border:1px solid rgba(224,90,32,.3);white-space:nowrap">พระนครศรีอยุธยา<span style="opacity:.5;margin-left:2px">(1)</span></span>
+              <a href="market1.html?province=กรุงเทพมหานคร&filter=bk" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(224,90,32,.12);color:rgba(224,90,32,1);border:1px solid rgba(224,90,32,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(224,90,32,.28)'" onmouseout="this.style.background='rgba(224,90,32,.12)'">กรุงเทพมหานคร<span style="opacity:.5;margin-left:2px">(56)</span></a>
+              <a href="market1.html?province=สมุทรปราการ&filter=bk" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(224,90,32,.12);color:rgba(224,90,32,1);border:1px solid rgba(224,90,32,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(224,90,32,.28)'" onmouseout="this.style.background='rgba(224,90,32,.12)'">สมุทรปราการ<span style="opacity:.5;margin-left:2px">(20)</span></a>
+              <a href="market1.html?province=ปทุมธานี&filter=bk" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(224,90,32,.12);color:rgba(224,90,32,1);border:1px solid rgba(224,90,32,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(224,90,32,.28)'" onmouseout="this.style.background='rgba(224,90,32,.12)'">ปทุมธานี<span style="opacity:.5;margin-left:2px">(19)</span></a>
+              <a href="market1.html?province=พระนครศรีอยุธยา&filter=bk" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(224,90,32,.12);color:rgba(224,90,32,1);border:1px solid rgba(224,90,32,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(224,90,32,.28)'" onmouseout="this.style.background='rgba(224,90,32,.12)'">พระนครศรีอยุธยา<span style="opacity:.5;margin-left:2px">(1)</span></a>
             </div>
           </div>
-          <!-- BW row -->
           <div style="margin-bottom:.8em">
-            <div style="font-size:.68em;font-weight:700;color:rgba(240,165,0,.9);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35em">
-              🟡 BW — 106 สาขา · 6 จังหวัด
-            </div>
+            <div style="font-size:.68em;font-weight:700;color:rgba(240,165,0,.9);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35em">🟡 BW — 106 สาขา · 6 จังหวัด</div>
             <div style="display:flex;gap:.35em;flex-wrap:wrap">
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(240,165,0,.12);color:rgba(240,165,0,1);border:1px solid rgba(240,165,0,.3);white-space:nowrap">กรุงเทพมหานคร<span style="opacity:.5;margin-left:2px">(48)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(240,165,0,.12);color:rgba(240,165,0,1);border:1px solid rgba(240,165,0,.3);white-space:nowrap">นนทบุรี<span style="opacity:.5;margin-left:2px">(21)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(240,165,0,.12);color:rgba(240,165,0,1);border:1px solid rgba(240,165,0,.3);white-space:nowrap">สมุทรสาคร<span style="opacity:.5;margin-left:2px">(17)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(240,165,0,.12);color:rgba(240,165,0,1);border:1px solid rgba(240,165,0,.3);white-space:nowrap">ปทุมธานี<span style="opacity:.5;margin-left:2px">(7)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(240,165,0,.12);color:rgba(240,165,0,1);border:1px solid rgba(240,165,0,.3);white-space:nowrap">สมุทรปราการ<span style="opacity:.5;margin-left:2px">(7)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(240,165,0,.12);color:rgba(240,165,0,1);border:1px solid rgba(240,165,0,.3);white-space:nowrap">นครปฐม<span style="opacity:.5;margin-left:2px">(6)</span></span>
+              <a href="market1.html?province=กรุงเทพมหานคร&filter=bw" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(240,165,0,.12);color:rgba(240,165,0,1);border:1px solid rgba(240,165,0,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(240,165,0,.28)'" onmouseout="this.style.background='rgba(240,165,0,.12)'">กรุงเทพมหานคร<span style="opacity:.5;margin-left:2px">(48)</span></a>
+              <a href="market1.html?province=นนทบุรี&filter=bw" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(240,165,0,.12);color:rgba(240,165,0,1);border:1px solid rgba(240,165,0,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(240,165,0,.28)'" onmouseout="this.style.background='rgba(240,165,0,.12)'">นนทบุรี<span style="opacity:.5;margin-left:2px">(21)</span></a>
+              <a href="market1.html?province=สมุทรสาคร&filter=bw" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(240,165,0,.12);color:rgba(240,165,0,1);border:1px solid rgba(240,165,0,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(240,165,0,.28)'" onmouseout="this.style.background='rgba(240,165,0,.12)'">สมุทรสาคร<span style="opacity:.5;margin-left:2px">(17)</span></a>
+              <a href="market1.html?province=ปทุมธานี&filter=bw" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(240,165,0,.12);color:rgba(240,165,0,1);border:1px solid rgba(240,165,0,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(240,165,0,.28)'" onmouseout="this.style.background='rgba(240,165,0,.12)'">ปทุมธานี<span style="opacity:.5;margin-left:2px">(7)</span></a>
+              <a href="market1.html?province=สมุทรปราการ&filter=bw" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(240,165,0,.12);color:rgba(240,165,0,1);border:1px solid rgba(240,165,0,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(240,165,0,.28)'" onmouseout="this.style.background='rgba(240,165,0,.12)'">สมุทรปราการ<span style="opacity:.5;margin-left:2px">(7)</span></a>
+              <a href="market1.html?province=นครปฐม&filter=bw" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(240,165,0,.12);color:rgba(240,165,0,1);border:1px solid rgba(240,165,0,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(240,165,0,.28)'" onmouseout="this.style.background='rgba(240,165,0,.12)'">นครปฐม<span style="opacity:.5;margin-left:2px">(6)</span></a>
             </div>
           </div>
-          <a href="market1.html" style="display:block;padding:.5em 0;background:#e05a20;color:#fff;text-align:center;border-radius:7px;font-size:.78em;font-weight:700;text-decoration:none;transition:opacity .2s" onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">
-            <i class="fas fa-map-marker-alt"></i> เปิดแผนที่ตลาด 1
+          <a href="market1.html" style="display:block;padding:.5em 0;background:#e05a20;color:#fff;text-align:center;border-radius:7px;font-size:.78em;font-weight:700;text-decoration:none" onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">
+            <i class="fas fa-map-marker-alt"></i> เปิดแผนที่ตลาด 1 (ทั้งหมด)
           </a>
         </div>
       </div>
@@ -2834,52 +2827,46 @@ footer p{color:rgba(255,255,255,.3);font-size:.78em;margin:0}
       <!-- ═══ ตลาด 2 ═══ -->
       <div class="mkt-panel" data-market="2" style="border-bottom:2px solid rgba(255,255,255,.06)">
         <div style="padding:1.1em 1.3em .9em">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:.5em">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:.6em">
             <div style="width:12px;height:12px;border-radius:50%;background:#3a86ff;flex-shrink:0;box-shadow:0 0 8px #3a86ff"></div>
             <div style="font-size:1em;font-weight:800;color:#fff">ตลาด 2 — ภาคอีสาน</div>
             <div style="margin-left:auto;font-size:1.6em;font-weight:900;color:#3a86ff;line-height:1">161</div>
           </div>
-          <!-- EN row -->
-          <div style="margin-bottom:.6em">
-            <div style="font-size:.68em;font-weight:700;color:rgba(58,134,255,.9);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35em">
-              🔵 EN — 77 สาขา · 9 จังหวัด
-            </div>
+          <div style="margin-bottom:.55em">
+            <div style="font-size:.68em;font-weight:700;color:rgba(58,134,255,.9);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35em">🔵 EN — 77 สาขา · 9 จังหวัด</div>
             <div style="display:flex;gap:.35em;flex-wrap:wrap">
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(58,134,255,.12);color:rgba(58,134,255,1);border:1px solid rgba(58,134,255,.3);white-space:nowrap">นครราชสีมา<span style="opacity:.5;margin-left:2px">(21)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(58,134,255,.12);color:rgba(58,134,255,1);border:1px solid rgba(58,134,255,.3);white-space:nowrap">ขอนแก่น<span style="opacity:.5;margin-left:2px">(13)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(58,134,255,.12);color:rgba(58,134,255,1);border:1px solid rgba(58,134,255,.3);white-space:nowrap">ชัยภูมิ<span style="opacity:.5;margin-left:2px">(13)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(58,134,255,.12);color:rgba(58,134,255,1);border:1px solid rgba(58,134,255,.3);white-space:nowrap">เลย<span style="opacity:.5;margin-left:2px">(11)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(58,134,255,.12);color:rgba(58,134,255,1);border:1px solid rgba(58,134,255,.3);white-space:nowrap">อุดรธานี<span style="opacity:.5;margin-left:2px">(8)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(58,134,255,.12);color:rgba(58,134,255,1);border:1px solid rgba(58,134,255,.3);white-space:nowrap">หนองคาย<span style="opacity:.5;margin-left:2px">(4)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(58,134,255,.12);color:rgba(58,134,255,1);border:1px solid rgba(58,134,255,.3);white-space:nowrap">มหาสารคาม<span style="opacity:.5;margin-left:2px">(4)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(58,134,255,.12);color:rgba(58,134,255,1);border:1px solid rgba(58,134,255,.3);white-space:nowrap">หนองบัวลำภู<span style="opacity:.5;margin-left:2px">(2)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(58,134,255,.12);color:rgba(58,134,255,1);border:1px solid rgba(58,134,255,.3);white-space:nowrap">บุรีรัมย์<span style="opacity:.5;margin-left:2px">(1)</span></span>
+              <a href="market2.html?province=นครราชสีมา&filter=en" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(58,134,255,.12);color:rgba(58,134,255,1);border:1px solid rgba(58,134,255,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(58,134,255,.28)'" onmouseout="this.style.background='rgba(58,134,255,.12)'">นครราชสีมา<span style="opacity:.5;margin-left:2px">(21)</span></a>
+              <a href="market2.html?province=ขอนแก่น&filter=en" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(58,134,255,.12);color:rgba(58,134,255,1);border:1px solid rgba(58,134,255,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(58,134,255,.28)'" onmouseout="this.style.background='rgba(58,134,255,.12)'">ขอนแก่น<span style="opacity:.5;margin-left:2px">(13)</span></a>
+              <a href="market2.html?province=ชัยภูมิ&filter=en" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(58,134,255,.12);color:rgba(58,134,255,1);border:1px solid rgba(58,134,255,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(58,134,255,.28)'" onmouseout="this.style.background='rgba(58,134,255,.12)'">ชัยภูมิ<span style="opacity:.5;margin-left:2px">(13)</span></a>
+              <a href="market2.html?province=เลย&filter=en" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(58,134,255,.12);color:rgba(58,134,255,1);border:1px solid rgba(58,134,255,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(58,134,255,.28)'" onmouseout="this.style.background='rgba(58,134,255,.12)'">เลย<span style="opacity:.5;margin-left:2px">(11)</span></a>
+              <a href="market2.html?province=อุดรธานี&filter=en" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(58,134,255,.12);color:rgba(58,134,255,1);border:1px solid rgba(58,134,255,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(58,134,255,.28)'" onmouseout="this.style.background='rgba(58,134,255,.12)'">อุดรธานี<span style="opacity:.5;margin-left:2px">(8)</span></a>
+              <a href="market2.html?province=หนองคาย&filter=en" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(58,134,255,.12);color:rgba(58,134,255,1);border:1px solid rgba(58,134,255,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(58,134,255,.28)'" onmouseout="this.style.background='rgba(58,134,255,.12)'">หนองคาย<span style="opacity:.5;margin-left:2px">(4)</span></a>
+              <a href="market2.html?province=มหาสารคาม&filter=en" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(58,134,255,.12);color:rgba(58,134,255,1);border:1px solid rgba(58,134,255,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(58,134,255,.28)'" onmouseout="this.style.background='rgba(58,134,255,.12)'">มหาสารคาม<span style="opacity:.5;margin-left:2px">(4)</span></a>
+              <a href="market2.html?province=หนองบัวลำภู&filter=en" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(58,134,255,.12);color:rgba(58,134,255,1);border:1px solid rgba(58,134,255,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(58,134,255,.28)'" onmouseout="this.style.background='rgba(58,134,255,.12)'">หนองบัวลำภู<span style="opacity:.5;margin-left:2px">(2)</span></a>
+              <a href="market2.html?province=บุรีรัมย์&filter=en" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(58,134,255,.12);color:rgba(58,134,255,1);border:1px solid rgba(58,134,255,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(58,134,255,.28)'" onmouseout="this.style.background='rgba(58,134,255,.12)'">บุรีรัมย์<span style="opacity:.5;margin-left:2px">(1)</span></a>
             </div>
           </div>
-          <!-- ES row -->
           <div style="margin-bottom:.8em">
-            <div style="font-size:.68em;font-weight:700;color:rgba(131,56,236,.9);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35em">
-              🟣 ES — 84 สาขา · 14 จังหวัด
-            </div>
+            <div style="font-size:.68em;font-weight:700;color:rgba(131,56,236,.9);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35em">🟣 ES — 84 สาขา · 14 จังหวัด</div>
             <div style="display:flex;gap:.35em;flex-wrap:wrap">
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap">อุบลราชธานี<span style="opacity:.5;margin-left:2px">(14)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap">บุรีรัมย์<span style="opacity:.5;margin-left:2px">(12)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap">ศรีสะเกษ<span style="opacity:.5;margin-left:2px">(10)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap">สุรินทร์<span style="opacity:.5;margin-left:2px">(10)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap">กาฬสินธุ์<span style="opacity:.5;margin-left:2px">(8)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap">ร้อยเอ็ด<span style="opacity:.5;margin-left:2px">(7)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap">ยโสธร<span style="opacity:.5;margin-left:2px">(6)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap">สกลนคร<span style="opacity:.5;margin-left:2px">(5)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap">บึงกาฬ<span style="opacity:.5;margin-left:2px">(4)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap">นครพนม<span style="opacity:.5;margin-left:2px">(2)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap">มุกดาหาร<span style="opacity:.5;margin-left:2px">(2)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap">อำนาจเจริญ<span style="opacity:.5;margin-left:2px">(2)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap">มหาสารคาม<span style="opacity:.5;margin-left:2px">(1)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap">นครราชสีมา<span style="opacity:.5;margin-left:2px">(1)</span></span>
+              <a href="market2.html?province=อุบลราชธานี&filter=es" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(131,56,236,.28)'" onmouseout="this.style.background='rgba(131,56,236,.12)'">อุบลราชธานี<span style="opacity:.5;margin-left:2px">(14)</span></a>
+              <a href="market2.html?province=บุรีรัมย์&filter=es" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(131,56,236,.28)'" onmouseout="this.style.background='rgba(131,56,236,.12)'">บุรีรัมย์<span style="opacity:.5;margin-left:2px">(12)</span></a>
+              <a href="market2.html?province=ศรีสะเกษ&filter=es" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(131,56,236,.28)'" onmouseout="this.style.background='rgba(131,56,236,.12)'">ศรีสะเกษ<span style="opacity:.5;margin-left:2px">(10)</span></a>
+              <a href="market2.html?province=สุรินทร์&filter=es" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(131,56,236,.28)'" onmouseout="this.style.background='rgba(131,56,236,.12)'">สุรินทร์<span style="opacity:.5;margin-left:2px">(10)</span></a>
+              <a href="market2.html?province=กาฬสินธุ์&filter=es" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(131,56,236,.28)'" onmouseout="this.style.background='rgba(131,56,236,.12)'">กาฬสินธุ์<span style="opacity:.5;margin-left:2px">(8)</span></a>
+              <a href="market2.html?province=ร้อยเอ็ด&filter=es" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(131,56,236,.28)'" onmouseout="this.style.background='rgba(131,56,236,.12)'">ร้อยเอ็ด<span style="opacity:.5;margin-left:2px">(7)</span></a>
+              <a href="market2.html?province=ยโสธร&filter=es" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(131,56,236,.28)'" onmouseout="this.style.background='rgba(131,56,236,.12)'">ยโสธร<span style="opacity:.5;margin-left:2px">(6)</span></a>
+              <a href="market2.html?province=สกลนคร&filter=es" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(131,56,236,.28)'" onmouseout="this.style.background='rgba(131,56,236,.12)'">สกลนคร<span style="opacity:.5;margin-left:2px">(5)</span></a>
+              <a href="market2.html?province=บึงกาฬ&filter=es" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(131,56,236,.28)'" onmouseout="this.style.background='rgba(131,56,236,.12)'">บึงกาฬ<span style="opacity:.5;margin-left:2px">(4)</span></a>
+              <a href="market2.html?province=นครพนม&filter=es" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(131,56,236,.28)'" onmouseout="this.style.background='rgba(131,56,236,.12)'">นครพนม<span style="opacity:.5;margin-left:2px">(2)</span></a>
+              <a href="market2.html?province=มุกดาหาร&filter=es" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(131,56,236,.28)'" onmouseout="this.style.background='rgba(131,56,236,.12)'">มุกดาหาร<span style="opacity:.5;margin-left:2px">(2)</span></a>
+              <a href="market2.html?province=อำนาจเจริญ&filter=es" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(131,56,236,.28)'" onmouseout="this.style.background='rgba(131,56,236,.12)'">อำนาจเจริญ<span style="opacity:.5;margin-left:2px">(2)</span></a>
+              <a href="market2.html?province=มหาสารคาม&filter=es" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(131,56,236,.28)'" onmouseout="this.style.background='rgba(131,56,236,.12)'">มหาสารคาม<span style="opacity:.5;margin-left:2px">(1)</span></a>
+              <a href="market2.html?province=นครราชสีมา&filter=es" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(131,56,236,.12);color:rgba(131,56,236,1);border:1px solid rgba(131,56,236,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(131,56,236,.28)'" onmouseout="this.style.background='rgba(131,56,236,.12)'">นครราชสีมา<span style="opacity:.5;margin-left:2px">(1)</span></a>
             </div>
           </div>
-          <a href="market2.html" style="display:block;padding:.5em 0;background:#3a86ff;color:#fff;text-align:center;border-radius:7px;font-size:.78em;font-weight:700;text-decoration:none;transition:opacity .2s" onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">
-            <i class="fas fa-map-marker-alt"></i> เปิดแผนที่ตลาด 2
+          <a href="market2.html" style="display:block;padding:.5em 0;background:#3a86ff;color:#fff;text-align:center;border-radius:7px;font-size:.78em;font-weight:700;text-decoration:none" onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">
+            <i class="fas fa-map-marker-alt"></i> เปิดแผนที่ตลาด 2 (ทั้งหมด)
           </a>
         </div>
       </div>
@@ -2887,43 +2874,39 @@ footer p{color:rgba(255,255,255,.3);font-size:.78em;margin:0}
       <!-- ═══ ตลาด 3 ═══ -->
       <div class="mkt-panel" data-market="3">
         <div style="padding:1.1em 1.3em .9em">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:.5em">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:.6em">
             <div style="width:12px;height:12px;border-radius:50%;background:#00b894;flex-shrink:0;box-shadow:0 0 8px #00b894"></div>
             <div style="font-size:1em;font-weight:800;color:#fff">ตลาด 3 — ภาคตะวันออก</div>
             <div style="margin-left:auto;font-size:1.6em;font-weight:900;color:#00b894;line-height:1">129</div>
           </div>
-          <!-- CE row -->
           <div style="margin-bottom:.8em">
-            <div style="font-size:.68em;font-weight:700;color:rgba(0,184,148,.9);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35em">
-              🟢 CE — 129 สาขา · 8 จังหวัด
-            </div>
+            <div style="font-size:.68em;font-weight:700;color:rgba(0,184,148,.9);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35em">🟢 CE — 129 สาขา · 8 จังหวัด</div>
             <div style="display:flex;gap:.35em;flex-wrap:wrap">
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(0,184,148,.12);color:rgba(0,184,148,1);border:1px solid rgba(0,184,148,.3);white-space:nowrap">ชลบุรี<span style="opacity:.5;margin-left:2px">(76)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(0,184,148,.12);color:rgba(0,184,148,1);border:1px solid rgba(0,184,148,.3);white-space:nowrap">ระยอง<span style="opacity:.5;margin-left:2px">(21)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(0,184,148,.12);color:rgba(0,184,148,1);border:1px solid rgba(0,184,148,.3);white-space:nowrap">จันทบุรี<span style="opacity:.5;margin-left:2px">(9)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(0,184,148,.12);color:rgba(0,184,148,1);border:1px solid rgba(0,184,148,.3);white-space:nowrap">ฉะเชิงเทรา<span style="opacity:.5;margin-left:2px">(8)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(0,184,148,.12);color:rgba(0,184,148,1);border:1px solid rgba(0,184,148,.3);white-space:nowrap">ปราจีนบุรี<span style="opacity:.5;margin-left:2px">(5)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(0,184,148,.12);color:rgba(0,184,148,1);border:1px solid rgba(0,184,148,.3);white-space:nowrap">นครนายก<span style="opacity:.5;margin-left:2px">(5)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(0,184,148,.12);color:rgba(0,184,148,1);border:1px solid rgba(0,184,148,.3);white-space:nowrap">สระแก้ว<span style="opacity:.5;margin-left:2px">(4)</span></span>
-              <span style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(0,184,148,.12);color:rgba(0,184,148,1);border:1px solid rgba(0,184,148,.3);white-space:nowrap">ตราด<span style="opacity:.5;margin-left:2px">(1)</span></span>
+              <a href="market3.html?province=ชลบุรี&filter=ce" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(0,184,148,.12);color:rgba(0,184,148,1);border:1px solid rgba(0,184,148,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(0,184,148,.28)'" onmouseout="this.style.background='rgba(0,184,148,.12)'">ชลบุรี<span style="opacity:.5;margin-left:2px">(76)</span></a>
+              <a href="market3.html?province=ระยอง&filter=ce" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(0,184,148,.12);color:rgba(0,184,148,1);border:1px solid rgba(0,184,148,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(0,184,148,.28)'" onmouseout="this.style.background='rgba(0,184,148,.12)'">ระยอง<span style="opacity:.5;margin-left:2px">(21)</span></a>
+              <a href="market3.html?province=จันทบุรี&filter=ce" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(0,184,148,.12);color:rgba(0,184,148,1);border:1px solid rgba(0,184,148,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(0,184,148,.28)'" onmouseout="this.style.background='rgba(0,184,148,.12)'">จันทบุรี<span style="opacity:.5;margin-left:2px">(9)</span></a>
+              <a href="market3.html?province=ฉะเชิงเทรา&filter=ce" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(0,184,148,.12);color:rgba(0,184,148,1);border:1px solid rgba(0,184,148,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(0,184,148,.28)'" onmouseout="this.style.background='rgba(0,184,148,.12)'">ฉะเชิงเทรา<span style="opacity:.5;margin-left:2px">(8)</span></a>
+              <a href="market3.html?province=ปราจีนบุรี&filter=ce" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(0,184,148,.12);color:rgba(0,184,148,1);border:1px solid rgba(0,184,148,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(0,184,148,.28)'" onmouseout="this.style.background='rgba(0,184,148,.12)'">ปราจีนบุรี<span style="opacity:.5;margin-left:2px">(5)</span></a>
+              <a href="market3.html?province=นครนายก&filter=ce" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(0,184,148,.12);color:rgba(0,184,148,1);border:1px solid rgba(0,184,148,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(0,184,148,.28)'" onmouseout="this.style.background='rgba(0,184,148,.12)'">นครนายก<span style="opacity:.5;margin-left:2px">(5)</span></a>
+              <a href="market3.html?province=สระแก้ว&filter=ce" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(0,184,148,.12);color:rgba(0,184,148,1);border:1px solid rgba(0,184,148,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(0,184,148,.28)'" onmouseout="this.style.background='rgba(0,184,148,.12)'">สระแก้ว<span style="opacity:.5;margin-left:2px">(4)</span></a>
+              <a href="market3.html?province=ตราด&filter=ce" style="display:inline-flex;align-items:center;gap:3px;font-size:.66em;padding:.18em .6em;border-radius:50px;background:rgba(0,184,148,.12);color:rgba(0,184,148,1);border:1px solid rgba(0,184,148,.3);white-space:nowrap;text-decoration:none;cursor:pointer;transition:all .15s" onmouseover="this.style.background='rgba(0,184,148,.28)'" onmouseout="this.style.background='rgba(0,184,148,.12)'">ตราด<span style="opacity:.5;margin-left:2px">(1)</span></a>
             </div>
           </div>
-          <a href="market3.html" style="display:block;padding:.5em 0;background:#00b894;color:#fff;text-align:center;border-radius:7px;font-size:.78em;font-weight:700;text-decoration:none;transition:opacity .2s" onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">
-            <i class="fas fa-map-marker-alt"></i> เปิดแผนที่ตลาด 3
+          <a href="market3.html" style="display:block;padding:.5em 0;background:#00b894;color:#fff;text-align:center;border-radius:7px;font-size:.78em;font-weight:700;text-decoration:none" onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">
+            <i class="fas fa-map-marker-alt"></i> เปิดแผนที่ตลาด 3 (ทั้งหมด)
           </a>
         </div>
       </div>
 
-      <!-- Footer count -->
-      <div style="padding:.9em 1.3em;margin-top:auto;border-top:1px solid rgba(255,255,255,.06);background:#011520">
-        <div style="font-size:.72em;color:rgba(255,255,255,.3);text-align:center">
-          แสดง <span id="map-count" style="color:#92c500;font-weight:700">492</span> สาขาบนแผนที่
-          &nbsp;·&nbsp; 5 Regional &nbsp;·&nbsp; 35 จังหวัด
+      <!-- Footer -->
+      <div style="padding:.8em 1.3em;margin-top:auto;border-top:1px solid rgba(255,255,255,.06);background:#011520">
+        <div style="font-size:.7em;color:rgba(255,255,255,.3);text-align:center">
+          แสดง <span id="map-count" style="color:#92c500;font-weight:700">492</span> สาขา &nbsp;·&nbsp; 5 Regional &nbsp;·&nbsp; 35 จังหวัด
         </div>
       </div>
 
-    </div><!-- end right panel -->
-  </div><!-- end map+panel -->
+    </div>
+  </div>
 </section>
 <!-- Leaflet for overview map -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
@@ -2935,15 +2918,15 @@ var miniMarkers = [];
 var activeFilter = 'all';
 
 var omap = L.map('overview-map', {
-  center: [12.8, 101.5],
-  zoom: 5,
+  center: [13.0, 101.5],
+  zoom: 6,
   zoomControl: true,
   attributionControl: false,
   scrollWheelZoom: false
 });
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {maxZoom:14}).addTo(omap);
 // Fit to Thailand bounds
-omap.fitBounds([[5.6, 97.3],[20.5, 105.7]], {padding:[10,10]});
+omap.fitBounds([[5.5, 97.5],[20.5, 105.8]], {padding:[5,5]});
 
 function makeDot(color, size) {
   size = size||10;
@@ -2989,7 +2972,7 @@ function filterMap(btn, market) {
   if (market === '1') omap.flyTo([13.85, 100.55], 10, {duration:1.2});
   else if (market === '2') omap.flyTo([16.0, 103.0], 8, {duration:1.2});
   else if (market === '3') omap.flyTo([13.2, 101.5], 9, {duration:1.2});
-  else omap.fitBounds([[5.6,97.3],[20.5,105.7]], {padding:[10,10], animate:true, duration:1.2});
+  else omap.fitBounds([[5.5,97.5],[20.5,105.8]], {padding:[5,5], animate:true, duration:1.2});
 }
 </script>
 
