@@ -1,0 +1,2726 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ตลาด 3 — Nine Eagle Innovation</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+/*
+ * Responsee CSS - v7 - 2020-09-30
+ * https://www.myresponsee.com
+ * Copyright 2020, Vision Design - graphic zoo
+ * Free to use under the MIT license.
+*/
+* {  
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  margin:0;	
+}
+body {
+  background:none repeat scroll 0 0 #eeeeee;
+  font-size:16px;
+  font-family:"Open Sans",Arial,sans-serif;
+  color:#444;
+}
+h1,h2,h3,h4,h5,h6 {
+  color:#152732;
+  font-weight: normal;
+  line-height: 1.3;
+  margin:0.5rem 0;  
+}
+h1 {font-size:2.7rem;}
+h2 {font-size:2.2rem;}  
+h3 {font-size:1.8rem;}  
+h4 {font-size:1.4rem;}  
+h5 {font-size:1.1rem;}  
+h6 {font-size:0.9rem;}    
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration:none;
+  color:#9BB800;
+  transition:color 0.20s linear 0s;
+  -o-transition:color 0.20s linear 0s;
+  -ms-transition:color 0.20s linear 0s;
+  -moz-transition:color 0.20s linear 0s;
+  -webkit-transition:color 0.20s linear 0s;
+}  
+a:hover {color:#B6C900;}
+p,li,dl,blockquote,table,kbd {
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+b,strong {font-weight:700;}
+.text-center {text-align:center!important;}
+.text-right {text-align:right!important;}
+img {
+  border:0;
+  display:block;
+  height:auto;
+  max-width:100%;
+  width:auto;
+}
+.owl-item img, .full-img {
+  max-width:none;
+  width:100%;
+}
+.owl-nav div {font-family:"mfg";}
+.grid .owl-carousel {
+  width:100% !important;
+}  
+table {
+  background:none repeat scroll 0 0 #fff;
+  border:1px solid #f0f0f0;
+  border-collapse:collapse;
+  border-spacing:0;
+  text-align:left;
+  width:100%;
+}
+table tr td, table tr th {padding:0.625rem;}
+table tfoot, table thead,table tr:nth-of-type(2n) {background:none repeat scroll 0 0 #f0f0f0;}
+th,table tr:nth-of-type(2n) td {border-right:1px solid #fff;}
+td {border-right:1px solid #f0f0f0;}
+.size-960 .line,.size-1140 .line,.size-1280 .line,.size-1520 .line {
+  margin:0 auto;
+  padding:0 0.625rem;
+}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(12, 1fr);
+  width:100%;
+  margin:0 auto;
+} 
+hr {
+  border: 0;
+  border-top: 1px solid #e5e5e5;
+  clear:both;  
+  height:0; 
+  margin:2.5rem auto;
+}
+li {padding:0;}
+ul,ol {padding-left:1.25rem;}
+blockquote {
+  border:2px solid #f0f0f0;
+  padding:1.25rem;
+}
+cite {
+  color:#999;
+  display:block;
+  font-size:0.8rem;
+}
+cite:before {content:"— ";}
+dl dt {font-weight:700;}
+dl dd {margin-bottom:0.625rem;}
+dl dd:last-child {margin-bottom:0;}
+abbr {cursor:help;}
+abbr[title] {border-bottom:1px dotted;}
+kbd {
+  background: #152732 none repeat scroll 0 0;
+  color: #fff;
+  padding: 0.125rem 0.3125rem;
+}
+code, kbd, pre, samp {font-family: Menlo,Monaco,Consolas,"Courier New",monospace;}
+mark {
+  background: #F3F8A9 none repeat scroll 0 0;
+  padding: 0.125rem 0.3125rem;
+}
+.size-960 .line,.size-960 .grid {max-width:59.75rem;}
+.size-1140 .line,.size-1140 .grid {max-width:71rem;}
+.size-1280 .line,.size-1280 .grid {max-width:80rem;}
+.size-1520 .line,.size-1520 .grid {max-width:95rem;}
+.grid.full {
+  max-width:100%!important;
+  padding: 0;
+}
+.vertical-center {display: inline-grid!important;}
+.vertical-center * {
+    align-items: center;
+    display: flex!important;
+}
+.text-center .vertical-center * {justify-content: center;}
+
+.size-960.align-content-left .line,.size-1140.align-content-left .line,.size-1280.align-content-left .line,.size-1520.align-content-left .line {margin-left:0;}
+form {line-height:1.4;}
+nav {
+  display:block;
+  width:100%;
+  background:#152732;
+}
+.line::after, nav::after, .center::after, .box::after, .margin::after, .margin2x::after, .grid.full::after {
+  clear:both;
+  content: ".";
+  display:block;
+  height:0;
+  line-height:0;
+  overflow:hidden;
+  visibility:hidden;
+}
+.grid.margin::after, .grid.margin2x::after {
+  content: "";
+  display:none;
+}
+.nav-text:after,.nav-text:before,.nav-text span {
+  background-color:#fff;
+  border-radius:3px;
+  content:'';
+  display:block;
+  height:3px;
+  margin:6px auto;
+  width: 30px;
+  transition:all 0.2s ease-in-out;
+  -moz-transition:all 0.2s ease-in-out;
+  -webkit-transition:all 0.2s ease-in-out;
+}
+.show-menu .nav-text:before {
+  transform:translateY(9px) rotate(135deg);
+  -moz-transform:translateY(9px) rotate(135deg);
+  -webkit-transform:translateY(9px) rotate(135deg);
+}
+.show-menu .nav-text:after {
+  transform:translateY(-9px) rotate(-135deg);
+  -moz-transform:translateY(-9px) rotate(-135deg);
+  -webkit-transform:translateY(-9px) rotate(-135deg);
+}
+.show-menu .nav-text span {
+  transform:scale(0);
+  -moz-transform:scale(0);
+  -webkit-transform:scale(0);  
+}
+.top-nav ul {padding:0;}
+.top-nav ul ul {
+  position:absolute;
+  background:#152732;
+}
+.top-nav li {
+  float:left;
+  list-style:none outside none;
+  cursor:pointer;
+}
+.top-nav li a {
+  color:#fff; 
+  display:block;
+  font-size:1rem;
+  padding:1.25rem; 
+}
+.top-nav li ul li a {
+  background:none repeat scroll 0 0 #152732;
+  min-width:100%;
+  padding:0.625rem;
+}
+.top-nav li a:hover, .aside-nav li a:hover {background:#2b4c61;}
+.top-nav li ul {display:none;}
+.top-nav li ul li,.top-nav li ul li ul li {
+  float:none;
+  list-style:none outside none;
+  min-width:100%;
+  padding:0;
+}
+.count-number {
+  background: rgba(153, 153, 153, 0.25) none repeat scroll 0 0;
+  border-radius: 10rem;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.7rem;
+  height: 1.3rem;
+  line-height: 1.3rem; 
+  margin: 0 0 -0.3125rem 0.3125rem;
+  text-align: center;
+  width: 1.3rem;
+}
+ul.chevron .count-number {display:none;}
+ul.chevron .submenu > a:after, ul.chevron .sub-submenu > a:after,ul.chevron .aside-submenu > a:after, ul.chevron .aside-sub-submenu > a:after {
+  content:"\f004";
+  display:inline-block;
+  font-family:"mfg";
+  font-size:0.7rem;
+  margin:0 0.625rem;
+}
+.top-nav .active-item a {background:#2b4c61;}
+.aside-nav > ul > li.active-item > a:link,.aside-nav > ul > li.active-item > a:visited {
+  background:#2b4c61;
+  color:#fff;
+}
+@media screen and (min-width:769px) {
+  .aside-nav .count-number {
+	  margin-left:-1.25rem;	
+	  float:right;	
+  }
+  .top-nav li:hover > ul {
+	  display:block;
+	  z-index:10;
+  }  
+  .top-nav li:hover > ul ul {
+    left:100%;
+    margin:-2.5rem 0;
+    width:100%;
+  } 
+}
+.nav-text,.aside-nav-text {display:none;}
+.aside-nav a,.aside-nav a:link,.aside-nav a:visited,.aside-nav li > ul,.top-nav a,.top-nav a:link,.top-nav a:visited {
+  transition:background 0.20s linear 0s;
+  -o-transition:background 0.20s linear 0s;
+  -ms-transition:background 0.20s linear 0s;
+  -moz-transition:background 0.20s linear 0s;
+  -webkit-transition:background 0.20s linear 0s;
+}
+.aside-nav ul {
+  background:#e8e8e8; 
+  padding:0;
+}
+.aside-nav li {
+  list-style:none outside none;
+  cursor:pointer;
+}
+.aside-nav li a,.aside-nav li a:link,.aside-nav li a:visited {
+  color:#444;
+  display:block;
+  font-size:1rem;
+  padding:1.25rem;
+}
+.aside-nav > ul > li:last-child a {border-bottom:0 none;}
+.aside-nav li > ul {
+  height:0;
+  display:block;
+  position:relative;
+  background:#f4f4f4;
+  border-left:solid 1px #f2f2f2;
+  border-right:solid 1px #f2f2f2;
+  overflow:hidden;
+}
+.aside-nav li ul ul {
+  border:0;
+  background:#fff;
+}
+.aside-nav ul ul a {padding:0.625rem 1.25rem;}
+.aside-nav li a:link, .aside-nav li a:visited {color:#333;}
+.aside-nav li li a:hover, .aside-nav li li.active-item > a, .aside-nav li li.aside-sub-submenu li a:hover {
+  color:#fff;
+  background:#2b4c61;
+}
+.aside-nav > ul > li > a:hover {color:#fff;}
+.aside-nav li li a:link, .aside-nav li li a:visited {background:none;}
+.aside-nav .show-aside-ul, .aside-nav .active-aside-item {height:auto;} 
+nav.breadcrumb-nav {
+  background:#fff;
+  margin:0.625rem 0;
+}
+nav.breadcrumb-nav ul {
+  list-style:none;
+  padding:0;
+}
+nav.breadcrumb-nav ul li {float:left;}
+nav.breadcrumb-nav ul li a:hover {text-decoration:underline;}
+.breadcrumb-nav i {color:#B6C900;}
+nav.breadcrumb-nav ul li:after {
+  content:"/";
+  margin:0 9px;
+  color:#c8c7c7;
+}
+nav.breadcrumb-nav ul li:last-child:after {content:"";}
+.slide-content, .slide-nav {
+  transition:all 0.10s linear 0s;
+  -o-transition:all 0.10s linear 0s;
+  -ms-transition:all 0.10s linear 0s;
+  -moz-transition:all 0.10s linear 0s;
+  -webkit-transition:all 0.10s linear 0s;
+}
+.slide-content {
+  float:left;
+  width:calc(100% - 60px);  
+}
+.aside-nav.slide-nav {
+  background:#1c3849;
+  bottom:0; 
+  right:0;
+  top:0;
+  margin-right:-180px;     
+  overflow-y:auto;
+  padding-top:0.625rem;
+  position:fixed;
+  width:240px;
+  z-index:2;
+}
+.aside-nav.slide-nav > ul {
+  background:#1c3849;
+  opacity:0;
+  transition:all 0.20s linear 0s;
+  -o-transition:all 0.20s linear 0s;
+  -ms-transition:all 0.20s linear 0s;
+  -moz-transition:all 0.20s linear 0s;
+  -webkit-transition:all 0.20s linear 0s;
+}
+.aside-nav.slide-nav li a, .aside-nav.slide-nav li a:link, .aside-nav.slide-nav li a:visited {
+  color:#fff;
+  display:block;
+  font-size:0.9rem;
+  padding:0.625rem 1.25rem;
+  border-bottom:0;
+}
+.aside-nav.slide-nav li a:hover {
+  background:#152732!important;
+  color:#fff!important;
+}
+.aside-nav.slide-nav li > ul {
+  background:#2b4c61;
+  border-left:0;
+  border-right:0;
+}
+.aside-nav.slide-nav li > ul ul {
+  background:#456274;
+  border-left:0;
+  border-right:0;
+}
+.slide-nav-button {
+  background:#152732;
+  cursor:pointer;
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  width:60px;
+  z-index:3;
+}
+.active-slide-nav .slide-content {margin-left:-240px;}
+.active-slide-nav .slide-nav {margin-right:60px;}
+.slide-to-left .slide-content {float:right;}
+.slide-to-left .slide-nav {
+  left:0;
+  margin-right:0; 
+  margin-left:-180px;    
+}
+.slide-to-left .slide-nav-button {left:0;}
+.slide-to-left.active-slide-nav .slide-content {
+  margin-right:-240px;
+  margin-left:0;
+}
+.slide-to-left.active-slide-nav .slide-nav {
+  margin-right:0;
+  margin-left:60px;
+}
+.active-slide-nav .slide-nav ul {opacity:1;}
+.nav-icon {
+  padding:0.9rem;
+  width:100%;
+}
+.nav-icon:after,.nav-icon:before,.nav-icon div {
+  background-color:#fff;
+  border-radius:3px;
+  content:"";
+  display:block;
+  height:3px;
+  margin:6px 0;
+  transition:all 0.2s ease-in-out;
+  -moz-transition:all 0.2s ease-in-out;
+  -webkit-transition:all 0.2s ease-in-out;
+}
+.active-slide-nav .nav-icon:before {
+  transform:translateY(9px) rotate(135deg);
+  -moz-transform:translateY(9px) rotate(135deg);
+  -webkit-transform:translateY(9px) rotate(135deg);
+}
+.active-slide-nav .nav-icon:after {
+  transform:translateY(-9px) rotate(-135deg);
+  -moz-transform:translateY(-9px) rotate(-135deg);
+  -webkit-transform:translateY(-9px) rotate(-135deg);
+}
+.active-slide-nav .nav-icon div {
+  transform:scale(0);
+  -moz-transform:scale(0);
+  -webkit-transform:scale(0);  
+}
+.active-slide-nav {overflow-x:hidden;} 
+.padding {
+  display:list-item;
+  list-style:none outside none;
+  padding:0.625rem;
+}
+.margin,.margin2x {display: block;}
+.margin {margin:0 -0.625rem;}
+.margin2x {margin:0 -1.25rem;}
+.grid.margin {
+  display: grid;
+  grid-column-gap:20px;
+  margin:0 auto;	
+}
+.grid.margin2x {
+  display: grid;
+  grid-column-gap:40px;
+  margin:0 auto;	
+}
+.line {clear:left;}
+.line .line {padding:0;}
+.hide-xxl {display:none!important;}
+.box {
+  background:none repeat scroll 0 0 #fff;
+  display:block;
+  padding:1.25rem;
+  width:100%;
+}
+.margin-bottom {margin-bottom:1.25rem!important;}
+.margin-bottom2x {margin-bottom:2.5rem!important;}
+.s-1,.s-2,.s-five,.s-3,.s-4,.s-5,.s-6,.s-7,.s-8,.s-9,.s-10,.s-11,.s-12,.m-1,.m-2,.m-five,.m-3,.m-4,.m-5,.m-6,.m-7,.m-8,.m-9,.m-10,.m-11,.m-12,.l-1,.l-2,.l-five,.l-3,.l-4,.l-5,.l-6,.l-7,.l-8,.l-9,.l-10,.l-11,.l-12,.xl-1,.xl-2,.xl-five,.xl-3,.xl-4,.xl-5,.xl-6,.xl-7,.xl-8,.xl-9,.xl-10,.xl-11,.xl-12,.xxl-1,.xxl-2,.xxl-five,.xxl-3,.xxl-4,.xxl-5,.xxl-6,.xxl-7,.xxl-8,.xxl-9,.xxl-10,.xxl-11,.xxl-12 {
+  float:left;
+  position:static;
+}
+.xxl-offset-1 {margin-left:8.3333%;}
+.xxl-offset-2 {margin-left:16.6666%;}
+.xxl-offset-five {margin-left:20%;}
+.xxl-offset-3 {margin-left:25%;}
+.xxl-offset-4 {margin-left:33.3333%;}
+.xxl-offset-5 {margin-left:41.6666%;}
+.xxl-offset-6 {margin-left:50%;}
+.xxl-offset-7 {margin-left:58.3333%;}
+.xxl-offset-8 {margin-left:66.6666%;}
+.xxl-offset-9 {margin-left:75%;}
+.xxl-offset-10 {margin-left:83.3333%;}
+.xxl-offset-11 {margin-left:91.6666%;}
+.xxl-offset-12 {margin-left:100%;}
+.xxl-order-1 {order:-1;}
+.xxl-order-2 {order:2;}
+.xxl-order-3 {order:3;}
+.xxl-order-4 {order:4;}
+.xxl-order-5 {order:5;}
+.xxl-order-6 {order:6;}
+.xxl-order-7 {order:7;}
+.xxl-order-8 {order:8;}
+.xxl-order-9 {order:9;}
+.xxl-order-10 {order:10;}
+.xxl-order-11 {order:11;}
+.xxl-order-12 {order:12;} 
+.xxl-order-last {order:99999999;} 
+.line .margin > .s-1,.line .margin > .s-2,.line .margin > .s-five,.line .margin > .s-3,.line .margin > .s-4,.line .margin > .s-5,.line .margin > .s-6,.line .margin > .s-7,.line .margin > .s-8,.line .margin > .s-9,.line .margin > .s-10,.line .margin > .s-11,.line .margin > .s-12,
+.line .margin > .m-1,.line .margin > .m-2,.line .margin > .m-five,.line .margin > .m-3,.line .margin > .m-4,.line .margin > .m-5,.line .margin > .m-6,.line .margin > .m-7,.line .margin > .m-8,.line .margin > .m-9,.line .margin > .m-10,.line .margin > .m-11,.line .margin > .m-12,
+.line .margin > .l-1,.line .margin > .l-2,.line .margin > .l-five,.line .margin > .l-3,.line .margin > .l-4,.line .margin > .l-5,.line .margin > .l-6,.line .margin > .l-7,.line .margin > .l-8,.line .margin > .l-9,.line .margin > .l-10,.line .margin > .l-11,.line .margin > .l-12,
+.line .margin > .xl-1,.line .margin > .xl-2,.line .margin > .xl-five,.line .margin > .xl-3,.line .margin > .xl-4,.line .margin > .xl-5,.line .margin > .xl-6,.line .margin > .xl-7,.line .margin > .xl-8,.line .margin > .xl-9,.line .margin > .xl-10,.line .margin > .xl-11,.line .margin > .xl-12,
+.line .margin > .xxl-1,.line .margin > .xxl-2,.line .margin > .xxl-five,.line .margin > .xxl-3,.line .margin > .xxl-4,.line .margin > .xxl-5,.line .margin > .xxl-6,.line .margin > .xxl-7,.line .margin > .xxl-8,.line .margin > .xxl-9,.line .margin > .xxl-10,.line .margin > .xxl-11,.line .margin > .xxl-12 {padding:0 0.625rem;}
+.line .margin2x > .s-1,.line .margin2x > .s-2,.line .margin2x > .s-five,.line .margin2x > .s-3,.line .margin2x > .s-4,.line .margin2x > .s-5,.line .margin2x > .s-6,.line .margin2x > .s-7,.line .margin2x > .s-8,.line .margin2x > .s-9,.line .margin2x > .s-10,.line .margin2x > .s-11,.line .margin2x > .s-12,
+.line .margin2x > .m-1,.line .margin2x > .m-2,.line .margin2x > .m-five,.line .margin2x > .m-3,.line .margin2x > .m-4,.line .margin2x > .m-5,.line .margin2x > .m-6,.line .margin2x > .m-7,.line .margin2x > .m-8,.line .margin2x > .m-9,.line .margin2x > .m-10,.line .margin2x > .m-11,.line .margin2x > .m-12,
+.line .margin2x > .l-1,.line .margin2x > .l-2,.line .margin2x > .l-five,.line .margin2x > .l-3,.line .margin2x > .l-4,.line .margin2x > .l-5,.line .margin2x > .l-6,.line .margin2x > .l-7,.line .margin2x > .l-8,.line .margin2x > .l-9,.line .margin2x > .l-10,.line .margin2x > .l-11,.line .margin2x > .l-12,
+.line .margin2x > .xl-1,.line .margin2x > .xl-2,.line .margin2x > .xl-five,.line .margin2x > .xl-3,.line .margin2x > .xl-4,.line .margin2x > .xl-5,.line .margin2x > .xl-6,.line .margin2x > .xl-7,.line .margin2x > .xl-8,.line .margin2x > .xl-9,.line .margin2x > .xl-10,.line .margin2x > .xl-11,.line .margin2x > .xl-12,
+.line .margin2x > .xxl-1,.line .margin2x > .xxl-2,.line .margin2x > .xxl-five,.line .margin2x > .xxl-3,.line .margin2x > .xxl-4,.line .margin2x > .xxl-5,.line .margin2x > .xxl-6,.line .margin2x > .xxl-7,.line .margin2x > .xxl-8,.line .margin2x > .xxl-9,.line .margin2x > .xxl-10,.line .margin2x > .xxl-11,.line .margin2x > .xxl-12 {padding:0 1.25rem;}
+.line-full-width .margin > .s-1,.line-full-width .margin > .s-2,.line-full-width .margin > .s-five,.line-full-width .margin > .s-3,.line-full-width .margin > .s-4,.line-full-width .margin > .s-5,.line-full-width .margin > .s-6,.line-full-width .margin > .s-7,.line-full-width .margin > .s-8,.line-full-width .margin > .s-9,.line-full-width .margin > .s-10,.line-full-width .margin > .s-11,.line-full-width .margin > .s-12,
+.line-full-width .margin > .m-1,.line-full-width .margin > .m-2,.line-full-width .margin > .m-five,.line-full-width .margin > .m-3,.line-full-width .margin > .m-4,.line-full-width .margin > .m-5,.line-full-width .margin > .m-6,.line-full-width .margin > .m-7,.line-full-width .margin > .m-8,.line-full-width .margin > .m-9,.line-full-width .margin > .m-10,.line-full-width .margin > .m-11,.line-full-width .margin > .m-12,
+.line-full-width .margin > .l-1,.line-full-width .margin > .l-2,.line-full-width .margin > .l-five,.line-full-width .margin > .l-3,.line-full-width .margin > .l-4,.line-full-width .margin > .l-5,.line-full-width .margin > .l-6,.line-full-width .margin > .l-7,.line-full-width .margin > .l-8,.line-full-width .margin > .l-9,.line-full-width .margin > .l-10,.line-full-width .margin > .l-11,.line-full-width .margin > .l-12,
+.line-full-width .margin > .xl-1,.line-full-width .margin > .xl-2,.line-full-width .margin > .xl-five,.line-full-width .margin > .xl-3,.line-full-width .margin > .xl-4,.line-full-width .margin > .xl-5,.line-full-width .margin > .xl-6,.line-full-width .margin > .xl-7,.line-full-width .margin > .xl-8,.line-full-width .margin > .xl-9,.line-full-width .margin > .xl-10,.line-full-width .margin > .xl-11,.line-full-width .margin > .xl-12,
+.line-full-width .margin > .xxl-1,.line-full-width .margin > .xxl-2,.line-full-width .margin > .xxl-five,.line-full-width .margin > .xxl-3,.line-full-width .margin > .xxl-4,.line-full-width .margin > .xxl-5,.line-full-width .margin > .xxl-6,.line-full-width .margin > .xxl-7,.line-full-width .margin > .xxl-8,.line-full-width .margin > .xxl-9,.line-full-width .margin > .xxl-10,.line-full-width .margin > .xxl-11,.line-full-width .margin > .xxl-12 {padding:0 0.625rem;}
+.line-full-width .margin2x > .s-1,.line-full-width .margin2x > .s-2,.line-full-width .margin2x > .s-five,.line-full-width .margin2x > .s-3,.line-full-width .margin2x > .s-4,.line-full-width .margin2x > .s-5,.line-full-width .margin2x > .s-6,.line-full-width .margin2x > .s-7,.line-full-width .margin2x > .s-8,.line-full-width .margin2x > .s-9,.line-full-width .margin2x > .s-10,.line-full-width .margin2x > .s-11,.line-full-width .margin2x > .s-12,
+.line-full-width .margin2x > .m-1,.line-full-width .margin2x > .m-2,.line-full-width .margin2x > .m-five,.line-full-width .margin2x > .m-3,.line-full-width .margin2x > .m-4,.line-full-width .margin2x > .m-5,.line-full-width .margin2x > .m-6,.line-full-width .margin2x > .m-7,.line-full-width .margin2x > .m-8,.line-full-width .margin2x > .m-9,.line-full-width .margin2x > .m-10,.line-full-width .margin2x > .m-11,.line-full-width .margin2x > .m-12,
+.line-full-width .margin2x > .l-1,.line-full-width .margin2x > .l-2,.line-full-width .margin2x > .l-five,.line-full-width .margin2x > .l-3,.line-full-width .margin2x > .l-4,.line-full-width .margin2x > .l-5,.line-full-width .margin2x > .l-6,.line-full-width .margin2x > .l-7,.line-full-width .margin2x > .l-8,.line-full-width .margin2x > .l-9,.line-full-width .margin2x > .l-10,.line-full-width .margin2x > .l-11,.line-full-width .margin2x > .l-12,
+.line-full-width .margin2x > .xl-1,.line-full-width .margin2x > .xl-2,.line-full-width .margin2x > .xl-five,.line-full-width .margin2x > .xl-3,.line-full-width .margin2x > .xl-4,.line-full-width .margin2x > .xl-5,.line-full-width .margin2x > .xl-6,.line-full-width .margin2x > .xl-7,.line-full-width .margin2x > .xl-8,.line-full-width .margin2x > .xl-9,.line-full-width .margin2x > .xl-10,.line-full-width .margin2x > .xl-11,.line-full-width .margin2x > .xl-12,
+.line-full-width .margin2x > .xxl-1,.line-full-width .margin2x > .xxl-2,.line-full-width .margin2x > .xxl-five,.line-full-width .margin2x > .xxl-3,.line-full-width .margin2x > .xxl-4,.line-full-width .margin2x > .xxl-5,.line-full-width .margin2x > .xxl-6,.line-full-width .margin2x > .xxl-7,.line-full-width .margin2x > .xxl-8,.line-full-width .margin2x > .xxl-9,.line-full-width .margin2x > .xxl-10,.line-full-width .margin2x > .xxl-11,.line-full-width .margin2x > .xxl-12 {padding:0 1.25rem;}
+.s-1, .grid .s-1.center {width:8.3333%;}
+.s-2, .grid .s-2.center {width:16.6666%;}
+.s-five {width:20%;}
+.s-3, .grid .s-3.center {width:25%;}
+.s-4, .grid .s-4.center {width:33.3333%;}
+.s-5, .grid .s-5.center {width:41.6666%;}
+.s-6, .grid .s-6.center {width:50%;}
+.s-7, .grid .s-7.center {width:58.3333%;}
+.s-8, .grid .s-8.center {width:66.6666%;}
+.s-9, .grid .s-9.center {width:75%;}
+.s-10, .grid .s-10.center {width:83.3333%;}
+.s-11, .grid .s-11.center {width:91.6666%;}
+.s-12, .grid .s-12.center {width:100%}
+.grid .s-1 {grid-column:span 1;}
+.grid .s-2 {grid-column:span 2;}
+.grid .s-3 {grid-column:span 3;}
+.grid .s-4 {grid-column:span 4;}
+.grid .s-5 {grid-column:span 5;}
+.grid .s-6 {grid-column:span 6;}
+.grid .s-7 {grid-column:span 7;}
+.grid .s-8 {grid-column:span 8;}
+.grid .s-9 {grid-column:span 9;}
+.grid .s-10 {grid-column:span 10;}
+.grid .s-11 {grid-column:span 11;}
+.grid .s-12 {grid-column:span 12;}  
+.grid .s-row-1 {grid-row:span 1;}
+.grid .s-row-2 {grid-row:span 2;}
+.grid .s-row-3 {grid-row:span 3;}
+.grid .s-row-4 {grid-row:span 4;}
+.grid .s-row-5 {grid-row:span 5;}
+.grid .s-row-6 {grid-row:span 6;}
+.grid .s-row-7 {grid-row:span 7;}
+.grid .s-row-8 {grid-row:span 8;}
+.grid .s-row-9 {grid-row:span 9;}
+.grid .s-row-10 {grid-row:span 10;}
+.grid .s-row-11 {grid-row:span 11;}
+.grid .s-row-12 {grid-row:span 12;}
+.m-1, .grid .m-1.center {width:8.3333%;}
+.m-2, .grid .m-2.center {width:16.6666%;}
+.m-five {width:20%;}
+.m-3, .grid .m-3.center {width:25%;}
+.m-4, .grid .m-4.center {width:33.3333%;}
+.m-5, .grid .m-5.center {width:41.6666%;}
+.m-6, .grid .m-6.center {width:50%;}
+.m-7, .grid .m-7.center {width:58.3333%;}
+.m-8, .grid .m-8.center {width:66.6666%;}
+.m-9, .grid .m-9.center {width:75%;}
+.m-10, .grid .m-10.center {width:83.3333%;}
+.m-11, .grid .m-11.center {width:91.6666%;}
+.m-12, .grid .m-12.center {width:100%}
+.grid .m-1 {grid-column:span 1;}
+.grid .m-2 {grid-column:span 2;}
+.grid .m-3 {grid-column:span 3;}
+.grid .m-4 {grid-column:span 4;}
+.grid .m-5 {grid-column:span 5;}
+.grid .m-6 {grid-column:span 6;}
+.grid .m-7 {grid-column:span 7;}
+.grid .m-8 {grid-column:span 8;}
+.grid .m-9 {grid-column:span 9;}
+.grid .m-10 {grid-column:span 10;}
+.grid .m-11 {grid-column:span 11;}
+.grid .m-12 {grid-column:span 12;} 
+.grid .m-row-1 {grid-row:span 1;}
+.grid .m-row-2 {grid-row:span 2;}
+.grid .m-row-3 {grid-row:span 3;}
+.grid .m-row-4 {grid-row:span 4;}
+.grid .m-row-5 {grid-row:span 5;}
+.grid .m-row-6 {grid-row:span 6;}
+.grid .m-row-7 {grid-row:span 7;}
+.grid .m-row-8 {grid-row:span 8;}
+.grid .m-row-9 {grid-row:span 9;}
+.grid .m-row-10 {grid-row:span 10;}
+.grid .m-row-11 {grid-row:span 11;}
+.grid .m-row-12 {grid-row:span 12;}
+.l-1, .grid .l-1.center {width:8.3333%;}
+.l-2, .grid .l-2.center {width:16.6666%;}
+.l-five {width:20%;}
+.l-3, .grid .l-3.center {width:25%;}
+.l-4, .grid .l-4.center {width:33.3333%;}
+.l-5, .grid .l-5.center {width:41.6666%;}
+.l-6, .grid .l-6.center {width:50%;}
+.l-7, .grid .l-7.center {width:58.3333%;}
+.l-8, .grid .l-8.center {width:66.6666%;}
+.l-9, .grid .l-9.center {width:75%;}
+.l-10, .grid .l-10.center {width:83.3333%;}
+.l-11, .grid .l-11.center {width:91.6666%;}
+.l-12, .grid .l-12.center {width:100%}
+.grid .l-1 {grid-column:span 1;}
+.grid .l-2 {grid-column:span 2;}
+.grid .l-3 {grid-column:span 3;}
+.grid .l-4 {grid-column:span 4;}
+.grid .l-5 {grid-column:span 5;}
+.grid .l-6 {grid-column:span 6;}
+.grid .l-7 {grid-column:span 7;}
+.grid .l-8 {grid-column:span 8;}
+.grid .l-9 {grid-column:span 9;}
+.grid .l-10 {grid-column:span 10;}
+.grid .l-11 {grid-column:span 11;}
+.grid .l-12 {grid-column:span 12;} 
+.grid .l-row-1 {grid-row:span 1;}
+.grid .l-row-2 {grid-row:span 2;}
+.grid .l-row-3 {grid-row:span 3;}
+.grid .l-row-4 {grid-row:span 4;}
+.grid .l-row-5 {grid-row:span 5;}
+.grid .l-row-6 {grid-row:span 6;}
+.grid .l-row-7 {grid-row:span 7;}
+.grid .l-row-8 {grid-row:span 8;}
+.grid .l-row-9 {grid-row:span 9;}
+.grid .l-row-10 {grid-row:span 10;}
+.grid .l-row-11 {grid-row:span 11;}
+.grid .l-row-12 {grid-row:span 12;}
+.xl-1, .grid .xl-1.center {width:8.3333%;}
+.xl-2, .grid .xl-2.center {width:16.6666%;}
+.xl-five {width:20%;}
+.xl-3, .grid .xl-3.center {width:25%;}
+.xl-4, .grid .xl-4.center {width:33.3333%;}
+.xl-5, .grid .xl-5.center {width:41.6666%;}
+.xl-6, .grid .xl-6.center {width:50%;}
+.xl-7, .grid .xl-7.center {width:58.3333%;}
+.xl-8, .grid .xl-8.center {width:66.6666%;}
+.xl-9, .grid .xl-9.center {width:75%;}
+.xl-10, .grid .xl-10.center {width:83.3333%;}
+.xl-11, .grid .xl-11.center {width:91.6666%;}
+.xl-12, .grid .xl-12.center {width:100%}
+.grid .xl-1 {grid-column:span 1;}
+.grid .xl-2 {grid-column:span 2;}
+.grid .xl-3 {grid-column:span 3;}
+.grid .xl-4 {grid-column:span 4;}
+.grid .xl-5 {grid-column:span 5;}
+.grid .xl-6 {grid-column:span 6;}
+.grid .xl-7 {grid-column:span 7;}
+.grid .xl-8 {grid-column:span 8;}
+.grid .xl-9 {grid-column:span 9;}
+.grid .xl-10 {grid-column:span 10;}
+.grid .xl-11 {grid-column:span 11;}
+.grid .xl-12 {grid-column:span 12;}   
+.grid .xl-row-1 {grid-row:span 1;}
+.grid .xl-row-2 {grid-row:span 2;}
+.grid .xl-row-3 {grid-row:span 3;}
+.grid .xl-row-4 {grid-row:span 4;}
+.grid .xl-row-5 {grid-row:span 5;}
+.grid .xl-row-6 {grid-row:span 6;}
+.grid .xl-row-7 {grid-row:span 7;}
+.grid .xl-row-8 {grid-row:span 8;}
+.grid .xl-row-9 {grid-row:span 9;}
+.grid .xl-row-10 {grid-row:span 10;}
+.grid .xl-row-11 {grid-row:span 11;}
+.grid .xl-row-12 {grid-row:span 12;}
+.xxl-1, .grid .xxl-1.center {width:8.3333%;}
+.xxl-2, .grid .xxl-2.center {width:16.6666%;}
+.xxl-five {width:20%;}
+.xxl-3, .grid .xxl-3.center {width:25%;}
+.xxl-4, .grid .xxl-4.center {width:33.3333%;}
+.xxl-5, .grid .xxl-5.center {width:41.6666%;}
+.xxl-6, .grid .xxl-6.center {width:50%;}
+.xxl-7, .grid .xxl-7.center {width:58.3333%;}
+.xxl-8, .grid .xxl-8.center {width:66.6666%;}
+.xxl-9, .grid .xxl-9.center {width:75%;}
+.xxl-10, .grid .xxl-10.center {width:83.3333%;}
+.xxl-11, .grid .xxl-11.center {width:91.6666%;}
+.xxl-12, .grid .xxl-12.center {width:100%}
+.grid .xxl-1 {grid-column:span 1;}
+.grid .xxl-2 {grid-column:span 2;}
+.grid .xxl-3 {grid-column:span 3;}
+.grid .xxl-4 {grid-column:span 4;}
+.grid .xxl-5 {grid-column:span 5;}
+.grid .xxl-6 {grid-column:span 6;}
+.grid .xxl-7 {grid-column:span 7;}
+.grid .xxl-8 {grid-column:span 8;}
+.grid .xxl-9 {grid-column:span 9;}
+.grid .xxl-10 {grid-column:span 10;}
+.grid .xxl-11 {grid-column:span 11;}
+.grid .xxl-12 {grid-column:span 12;}
+.grid .xxl-row-1 {grid-row:span 1;}
+.grid .xxl-row-2 {grid-row:span 2;}
+.grid .xxl-row-3 {grid-row:span 3;}
+.grid .xxl-row-4 {grid-row:span 4;}
+.grid .xxl-row-5 {grid-row:span 5;}
+.grid .xxl-row-6 {grid-row:span 6;}
+.grid .xxl-row-7 {grid-row:span 7;}
+.grid .xxl-row-8 {grid-row:span 8;}
+.grid .xxl-row-9 {grid-row:span 9;}
+.grid .xxl-row-10 {grid-row:span 10;}
+.grid .xxl-row-11 {grid-row:span 11;}
+.grid .xxl-row-12 {grid-row:span 12;}
+.right {float:right;}
+.left {float:left;} 
+
+@media screen and (max-width:1366px) {
+  .hide-xxl,.hide-l,.hide-m,.hide-s {display:initial!important;}
+  .hide-xl {display:none!important;}
+  .size-960,.size-1140,.size-1280,.size-1520 {max-width:1366px;}
+  .xxl-offset-1,.xxl-offset-2,.xxl-offset-five,.xxl-offset-3,.xxl-offset-4,.xxl-offset-5,.xxl-offset-6,.xxl-offset-7,.xxl-offset-8,.xxl-offset-9,.xxl-offset-10,.xxl-offset-11,.xxl-offset-12 {margin-left:0;}
+  .xl-offset-1 {margin-left:8.3333%;}
+  .xl-offset-2 {margin-left:16.6666%;}
+  .xl-offset-five {margin-left:20%;}
+  .xl-offset-3 {margin-left:25%;}
+  .xl-offset-4 {margin-left:33.3333%;}
+  .xl-offset-5 {margin-left:41.6666%;}
+  .xl-offset-6 {margin-left:50%;}
+  .xl-offset-7 {margin-left:58.3333%;}
+  .xl-offset-8 {margin-left:66.6666%;}
+  .xl-offset-9 {margin-left:75%;}
+  .xl-offset-10 {margin-left:83.3333%;}
+  .xl-offset-11 {margin-left:91.6666%;}
+  .xl-offset-12 {margin-left:100%;}
+  .xxl-order-1,.xxl-order-2,.xxl-order-3,.xxl-order-4,.xxl-order-5,.xxl-order-6,.xxl-order-7,.xxl-order-8,.xxl-order-9,.xxl-order-10,.xxl-order-11,.xxl-order-12,.xxl-order-last {order:initial;} 
+  .xl-order-1 {order:-1;}
+  .xl-order-2 {order:2;}
+  .xl-order-3 {order:3;}
+  .xl-order-4 {order:4;}
+  .xl-order-5 {order:5;}
+  .xl-order-6 {order:6;}
+  .xl-order-7 {order:7;}
+  .xl-order-8 {order:8;}
+  .xl-order-9 {order:9;}
+  .xl-order-10 {order:10;}
+  .xl-order-11 {order:11;}
+  .xl-order-12 {order:12;} 
+  .xl-order-last {order:99999999;} 
+  .xl-1, .grid .xl-1.center {width:8.3333%;}
+  .xl-2, .grid .xl-2.center {width:16.6666%;}
+  .xl-five {width:20%;}
+  .xl-3, .grid .xl-3.center {width:25%;}
+  .xl-4, .grid .xl-4.center {width:33.3333%;}
+  .xl-5, .grid .xl-5.center {width:41.6666%;}
+  .xl-6, .grid .xl-6.center {width:50%;}
+  .xl-7, .grid .xl-7.center {width:58.3333%;}
+  .xl-8, .grid .xl-8.center {width:66.6666%;}
+  .xl-9, .grid .xl-9.center {width:75%;}
+  .xl-10, .grid .xl-10.center {width:83.3333%;}
+  .xl-11, .grid .xl-11.center {width:91.6666%;}
+  .xl-12, .grid .xl-12.center {width:100%}
+  .grid .xl-1 {grid-column:span 1;}
+  .grid .xl-2 {grid-column:span 2;}
+  .grid .xl-3 {grid-column:span 3;}
+  .grid .xl-4 {grid-column:span 4;}
+  .grid .xl-5 {grid-column:span 5;}
+  .grid .xl-6 {grid-column:span 6;}
+  .grid .xl-7 {grid-column:span 7;}
+  .grid .xl-8 {grid-column:span 8;}
+  .grid .xl-9 {grid-column:span 9;}
+  .grid .xl-10 {grid-column:span 10;}
+  .grid .xl-11 {grid-column:span 11;}
+  .grid .xl-12 {grid-column:span 12;}
+  .grid .xl-row-1 {grid-row:span 1;}
+  .grid .xl-row-2 {grid-row:span 2;}
+  .grid .xl-row-3 {grid-row:span 3;}
+  .grid .xl-row-4 {grid-row:span 4;}
+  .grid .xl-row-5 {grid-row:span 5;}
+  .grid .xl-row-6 {grid-row:span 6;}
+  .grid .xl-row-7 {grid-row:span 7;}
+  .grid .xl-row-8 {grid-row:span 8;}
+  .grid .xl-row-9 {grid-row:span 9;}
+  .grid .xl-row-10 {grid-row:span 10;}
+  .grid .xl-row-11 {grid-row:span 11;}
+  .grid .xl-row-12 {grid-row:span 12;}  
+}
+
+@media screen and (max-width:1140px) {
+  .hide-xxl,.hide-xl,.hide-m,.hide-s {display:initial!important;}
+  .hide-l {display:none!important;}
+  .size-960,.size-1140,.size-1280,.size-1520 {max-width:1140px;}
+  .xl-offset-1,.xl-offset-2,.xl-offset-five,.xl-offset-3,.xl-offset-4,.xl-offset-5,.xl-offset-6,.xl-offset-7,.xl-offset-8,.xl-offset-9,.xl-offset-10,.xl-offset-11,.xl-offset-12 {margin-left:0;}
+  .l-offset-1 {margin-left:8.3333%;}
+  .l-offset-2 {margin-left:16.6666%;}
+  .l-offset-five {margin-left:20%;}
+  .l-offset-3 {margin-left:25%;}
+  .l-offset-4 {margin-left:33.3333%;}
+  .l-offset-5 {margin-left:41.6666%;}
+  .l-offset-6 {margin-left:50%;}
+  .l-offset-7 {margin-left:58.3333%;}
+  .l-offset-8 {margin-left:66.6666%;}
+  .l-offset-9 {margin-left:75%;}
+  .l-offset-10 {margin-left:83.3333%;}
+  .l-offset-11 {margin-left:91.6666%;}
+  .l-offset-12 {margin-left:100%;}
+  .xl-order-1,.xl-order-2,.xl-order-3,.xl-order-4,.xl-order-5,.xl-order-6,.xl-order-7,.xl-order-8,.xl-order-9,.xl-order-10,.xl-order-11,.xl-order-12,.xl-order-last {order:initial;} 
+  .l-order-1 {order:-1;}
+  .l-order-2 {order:2;}
+  .l-order-3 {order:3;}
+  .l-order-4 {order:4;}
+  .l-order-5 {order:5;}
+  .l-order-6 {order:6;}
+  .l-order-7 {order:7;}
+  .l-order-8 {order:8;}
+  .l-order-9 {order:9;}
+  .l-order-10 {order:10;}
+  .l-order-11 {order:11;}
+  .l-order-12 {order:12;} 
+  .l-order-last {order:99999999;} 
+  .l-1, .grid .l-1.center {width:8.3333%;}
+  .l-2, .grid .l-2.center {width:16.6666%;}
+  .l-five {width:20%;}
+  .l-3, .grid .l-3.center {width:25%;}
+  .l-4, .grid .l-4.center {width:33.3333%;}
+  .l-5, .grid .l-5.center {width:41.6666%;}
+  .l-6, .grid .l-6.center {width:50%;}
+  .l-7, .grid .l-7.center {width:58.3333%;}
+  .l-8, .grid .l-8.center {width:66.6666%;}
+  .l-9, .grid .l-9.center {width:75%;}
+  .l-10, .grid .l-10.center {width:83.3333%;}
+  .l-11, .grid .l-11.center {width:91.6666%;}
+  .l-12, .grid .l-12.center {width:100%}
+  .grid .l-1 {grid-column:span 1;}
+  .grid .l-2 {grid-column:span 2;}
+  .grid .l-3 {grid-column:span 3;}
+  .grid .l-4 {grid-column:span 4;}
+  .grid .l-5 {grid-column:span 5;}
+  .grid .l-6 {grid-column:span 6;}
+  .grid .l-7 {grid-column:span 7;}
+  .grid .l-8 {grid-column:span 8;}
+  .grid .l-9 {grid-column:span 9;}
+  .grid .l-10 {grid-column:span 10;}
+  .grid .l-11 {grid-column:span 11;}
+  .grid .l-12 {grid-column:span 12;}
+  .grid .l-row-1 {grid-row:span 1;}
+  .grid .l-row-2 {grid-row:span 2;}
+  .grid .l-row-3 {grid-row:span 3;}
+  .grid .l-row-4 {grid-row:span 4;}
+  .grid .l-row-5 {grid-row:span 5;}
+  .grid .l-row-6 {grid-row:span 6;}
+  .grid .l-row-7 {grid-row:span 7;}
+  .grid .l-row-8 {grid-row:span 8;}
+  .grid .l-row-9 {grid-row:span 9;}
+  .grid .l-row-10 {grid-row:span 10;}
+  .grid .l-row-11 {grid-row:span 11;}
+  .grid .l-row-12 {grid-row:span 12;}  
+}
+ 
+@media screen and (max-width:768px) {
+  .size-960,.size-1140,.size-1280,.size-1520 {max-width:768px;}
+  .hide-xxl,.hide-xl,.hide-l,.hide-s {display:initial!important;}
+  .hide-m {display:none!important;}
+  nav {
+    display:block;
+    cursor:pointer;
+    line-height:3;
+  }
+  .top-nav li a {background:none repeat scroll 0 0 #1c3849;}
+  .top-nav > ul {
+    height:0;
+    width:100%;
+    overflow:hidden;
+    position:relative;
+    z-index:999;
+  }
+  .top-nav > ul.show-menu,.aside-nav.minimize-on-small > ul.show-menu {height:auto;}
+  .top-nav ul ul {
+    left:0;
+    margin-top:0;
+    position:relative;
+    right:0;
+  } 
+  .top-nav li ul li a {min-width:100%;}
+  .top-nav li {
+    float:none;
+    list-style:none outside none;
+    padding:0;
+  }
+  .top-nav li a {
+    color:#fff;
+    display:block;
+    padding:1.25rem 0.625rem;
+    text-align:center;
+    text-decoration:none;
+  }
+  .top-nav li a:hover {
+    background:none repeat scroll 0 0 #152732;
+    color:#fff;
+  }
+  .top-nav li ul,.top-nav li ul li ul {
+    display:block;  
+    overflow:hidden; 
+    height:0;   
+  } 
+  .top-nav > ul ul.show-ul {
+    display:block;
+    height:auto;  
+  }
+  .top-nav li ul li a {
+    background:none repeat scroll 0 0 #2b4c61;
+    padding:0.625rem;
+  }
+  .top-nav li ul li ul li a { background:none repeat scroll 0 0 #456274;}
+  .top-nav {
+    position:fixed;
+    top:0;
+    z-index:10;
+    left:-100%;
+    width:100%!important;
+    bottom:0;
+    background:none repeat scroll 0 0 #1c3849;
+    overflow-y:auto;
+    transition:left 0.20s linear 0s;
+    -o-transition:left 0.20s linear 0s;
+    -ms-transition:left 0.20s linear 0s;
+    -moz-transition:left 0.20s linear 0s;
+    -webkit-transition:left 0.20s linear 0s;
+  }
+  body.show-menu {overflow: hidden;}
+  .show-menu .top-nav {
+    left:0;
+    right:60px
+  }
+  .top-nav > ul {
+    height:auto;
+    overflow:auto;
+    position:relative;
+  	top:60px;
+  }
+  .nav-text {
+    color:#fff;
+    display:inline-block;
+    margin-right:0;
+    width:auto;
+    position:fixed;
+    top:0;
+  	left:0;
+  	background:none repeat scroll 0 0 #1c3849;
+  	height:60px;
+  	width:60px;
+  	text-align:center;
+  	line-height:60px;
+  	z-index:50;
+  	padding-top:15px;
+  }  
+  .mobile-nav-right .top-nav {
+    left:100%;
+    right:-100%;
+  }
+  .show-menu .mobile-nav-right .top-nav {
+    left:0;
+    right:0;
+  }
+  .mobile-nav-right .nav-text {
+    margin-left:0;
+    top:0;
+  	left:auto;
+    right:0;
+  }  
+  .grid.margin2x {grid-column-gap: 20px;}
+  .l-offset-1,.l-offset-2,.l-offset-five,.l-offset-3,.l-offset-4,.l-offset-5,.l-offset-6,.l-offset-7,.l-offset-8,.l-offset-9,.l-offset-10,.l-offset-11,.l-offset-12,
+  .xl-offset-1,.xl-offset-2,.xl-offset-five,.xl-offset-3,.xl-offset-4,.xl-offset-5,.xl-offset-6,.xl-offset-7,.xl-offset-8,.xl-offset-9,.xl-offset-10,.xl-offset-11,.xl-offset-12,
+  .xxl-offset-1,.xxl-offset-2,.xxl-offset-five,.xxl-offset-3,.xxl-offset-4,.xxl-offset-5,.xxl-offset-6,.xxl-offset-7,.xxl-offset-8,.xxl-offset-9,.xxl-offset-10,.xxl-offset-11,.xxl-offset-12 {margin-left:0;}
+  .m-offset-1 {margin-left:8.3333%;}
+  .m-offset-2 {margin-left:16.6666%;}
+  .m-offset-five {margin-left:20%;}
+  .m-offset-3 {margin-left:25%;}
+  .m-offset-4 {margin-left:33.3333%;}
+  .m-offset-5 {margin-left:41.6666%;}
+  .m-offset-6 {margin-left:50%;}
+  .m-offset-7 {margin-left:58.3333%;}
+  .m-offset-8 {margin-left:66.6666%;}
+  .m-offset-9 {margin-left:75%;}
+  .m-offset-10 {margin-left:83.3333%;}
+  .m-offset-11 {margin-left:91.6666%;}
+  .m-offset-12 {margin-left:100%;}
+  .l-order-1,.l-order-2,.l-order-3,.l-order-4,.l-order-5,.l-order-6,.l-order-7,.l-order-8,.l-order-9,.l-order-10,.l-order-11,.l-order-12,.l-order-last {order:initial;}   
+  .m-order-1 {order:-1;}
+  .m-order-2 {order:2;}
+  .m-order-3 {order:3;}
+  .m-order-4 {order:4;}
+  .m-order-5 {order:5;}
+  .m-order-6 {order:6;}
+  .m-order-7 {order:7;}
+  .m-order-8 {order:8;}
+  .m-order-9 {order:9;}
+  .m-order-10 {order:10;}
+  .m-order-11 {order:11;}
+  .m-order-12 {order:12;} 
+  .m-order-last {order:99999999;} 
+  .m-1, .grid .m-1.center {width:8.3333%;}
+  .m-2, .grid .m-2.center {width:16.6666%;}
+  .m-five {width:20%;}
+  .m-3, .grid .m-3.center {width:25%;}
+  .m-4, .grid .m-4.center {width:33.3333%;}
+  .m-5, .grid .m-5.center {width:41.6666%;}
+  .m-6, .grid .m-6.center {width:50%;}
+  .m-7, .grid .m-7.center {width:58.3333%;}
+  .m-8, .grid .m-8.center {width:66.6666%;}
+  .m-9, .grid .m-9.center {width:75%;}
+  .m-10, .grid .m-10.center {width:83.3333%;}
+  .m-11, .grid .m-11.center {width:91.6666%;}
+  .m-12, .grid .m-12.center {width:100%}
+  .grid .m-1 {grid-column:span 1;}
+  .grid .m-2 {grid-column:span 2;}
+  .grid .m-3 {grid-column:span 3;}
+  .grid .m-4 {grid-column:span 4;}
+  .grid .m-5 {grid-column:span 5;}
+  .grid .m-6 {grid-column:span 6;}
+  .grid .m-7 {grid-column:span 7;}
+  .grid .m-8 {grid-column:span 8;}
+  .grid .m-9 {grid-column:span 9;}
+  .grid .m-10 {grid-column:span 10;}
+  .grid .m-11 {grid-column:span 11;}
+  .grid .m-12 {grid-column:span 12;}
+  .grid .m-row-1 {grid-row:span 1;}
+  .grid .m-row-2 {grid-row:span 2;}
+  .grid .m-row-3 {grid-row:span 3;}
+  .grid .m-row-4 {grid-row:span 4;}
+  .grid .m-row-5 {grid-row:span 5;}
+  .grid .m-row-6 {grid-row:span 6;}
+  .grid .m-row-7 {grid-row:span 7;}
+  .grid .m-row-8 {grid-row:span 8;}
+  .grid .m-row-9 {grid-row:span 9;}
+  .grid .m-row-10 {grid-row:span 10;}
+  .grid .m-row-11 {grid-row:span 11;}
+  .grid .m-row-12 {grid-row:span 12;}  
+}
+
+@media screen and (max-width:480px) {
+  .size-960,.size-1140,.size-1280,.size-1520 {max-width:480px;}
+  .aside-nav li a {text-align: center;}
+  .minimize-on-small .aside-nav-text {
+    background:#152732 none repeat scroll 0 0;
+    color:#fff;
+    cursor:pointer;
+    display:block;
+    font-size:1.2rem;
+    line-height:3;
+    max-width:100%;
+    padding-right:0.625rem;
+    text-align:center;
+    vertical-align:middle;
+  }
+  .aside-nav-text:after {
+    content:"\f008";
+    font-family:"mfg";
+    font-size:1.1rem;
+    margin-left:0.5rem;
+    text-align:right;
+  }
+  .aside-nav.minimize-on-small > ul {
+    height:0;
+    overflow:hidden;
+  }
+  .hide-xxl,.hide-xl,.hide-l,.hide-m {display:initial!important;}
+  .hide-s {display:none!important;}
+  .count-number {margin-right:-1.25rem;} 
+  .m-offset-1,.m-offset-2,.m-offset-five,.m-offset-3,.m-offset-4,.m-offset-5,.m-offset-6,.m-offset-7,.m-offset-8,.m-offset-9,.m-offset-10,.m-offset-11,.m-offset-12,
+  .l-offset-1,.l-offset-2,.l-offset-five,.l-offset-3,.l-offset-4,.l-offset-5,.l-offset-6,.l-offset-7,.l-offset-8,.l-offset-9,.l-offset-10,.l-offset-11,.l-offset-12,
+  .xl-offset-1,.xl-offset-2,.xl-offset-five,.xl-offset-3,.xl-offset-4,.xl-offset-5,.xl-offset-6,.xl-offset-7,.xl-offset-8,.xl-offset-9,.xl-offset-10,.xl-offset-11,.xl-offset-12,
+  .xxl-offset-1,.xxl-offset-2,.xxl-offset-five,.xxl-offset-3,.xxl-offset-4,.xxl-offset-5,.xxl-offset-6,.xxl-offset-7,.xxl-offset-8,.xxl-offset-9,.xxl-offset-10,.xxl-offset-11,.xxl-offset-12 {margin-left:0;}
+  .s-offset-1 {margin-left:8.3333%;}
+  .s-offset-2 {margin-left:16.6666%;}
+  .s-offset-five {margin-left:20%;}
+  .s-offset-3 {margin-left:25%;}
+  .s-offset-4 {margin-left:33.3333%;}
+  .s-offset-5 {margin-left:41.6666%;}
+  .s-offset-6 {margin-left:50%;}
+  .s-offset-7 {margin-left:58.3333%;}
+  .s-offset-8 {margin-left:66.6666%;}
+  .s-offset-9 {margin-left:75%;}
+  .s-offset-10 {margin-left:83.3333%;}
+  .s-offset-11 {margin-left:91.6666%;}
+  .s-offset-12 {margin-left:100%;}
+  .m-order-1,.m-order-2,.m-order-3,.m-order-4,.m-order-5,.m-order-6,.m-order-7,.m-order-8,.m-order-9,.m-order-10,.m-order-11,.m-order-12,.m-order-last {order:initial;}  
+  .s-order-1 {order:-1;}
+  .s-order-2 {order:2;}
+  .s-order-3 {order:3;}
+  .s-order-4 {order:4;}
+  .s-order-5 {order:5;}
+  .s-order-6 {order:6;}
+  .s-order-7 {order:7;}
+  .s-order-8 {order:8;}
+  .s-order-9 {order:9;}
+  .s-order-10 {order:10;}
+  .s-order-11 {order:11;}
+  .s-order-12 {order:12;} 
+  .s-order-last {order:99999999;} 
+  .s-1, .grid .s-1.center {width:8.3333%;}
+  .s-2, .grid .s-2.center {width:16.6666%;}
+  .s-five {width:20%;}
+  .s-3, .grid .s-3.center {width:25%;}
+  .s-4, .grid .s-4.center {width:33.3333%;}
+  .s-5, .grid .s-5.center {width:41.6666%;}
+  .s-6, .grid .s-6.center {width:50%;}
+  .s-7, .grid .s-7.center {width:58.3333%;}
+  .s-8, .grid .s-8.center {width:66.6666%;}
+  .s-9, .grid .s-9.center {width:75%;}
+  .s-10, .grid .s-10.center {width:83.3333%;}
+  .s-11, .grid .s-11.center {width:91.6666%;}
+  .s-12, .grid .s-12.center {width:100%}
+  .grid .s-1 {grid-column:span 1;}
+  .grid .s-2 {grid-column:span 2;}
+  .grid .s-3 {grid-column:span 3;}
+  .grid .s-4 {grid-column:span 4;}
+  .grid .s-5 {grid-column:span 5;}
+  .grid .s-6 {grid-column:span 6;}
+  .grid .s-7 {grid-column:span 7;}
+  .grid .s-8 {grid-column:span 8;}
+  .grid .s-9 {grid-column:span 9;}
+  .grid .s-10 {grid-column:span 10;}
+  .grid .s-11 {grid-column:span 11;}
+  .grid .s-12 {grid-column:span 12;}
+  .grid .s-row-1 {grid-row:span 1;}
+  .grid .s-row-2 {grid-row:span 2;}
+  .grid .s-row-3 {grid-row:span 3;}
+  .grid .s-row-4 {grid-row:span 4;}
+  .grid .s-row-5 {grid-row:span 5;}
+  .grid .s-row-6 {grid-row:span 6;}
+  .grid .s-row-7 {grid-row:span 7;}
+  .grid .s-row-8 {grid-row:span 8;}
+  .grid .s-row-9 {grid-row:span 9;}
+  .grid .s-row-10 {grid-row:span 10;}
+  .grid .s-row-11 {grid-row:span 11;}
+  .grid .s-row-12 {grid-row:span 12;}  
+}
+.grid .s-1,.grid .s-2,.grid .s-five,.grid .s-3,.grid .s-4,.grid .s-5,.grid .s-6,.grid .s-7,.grid .s-8,.grid .s-9,.grid .s-10,.grid .s-11,.grid .s-12,.grid .m-1,.grid .m-2,.grid .m-five,.grid .m-3,.grid .m-4,.grid .m-5,.grid .m-6,.grid .m-7,.grid .m-8,.grid .m-9,.grid .m-10,.grid .m-11,.grid .m-12,.grid .l-1,.grid .l-2,.grid .l-five,.grid .l-3,.grid .l-4,.grid .l-5,.grid .l-6,.grid .l-7,.grid .l-8,.grid .l-9,.grid .l-10,.grid .l-11,.grid .l-12,.grid .xl-1,.grid .xl-2,.grid .xl-five,.grid .xl-3,.grid .xl-4,.grid .xl-5,.grid .xl-6,.grid .xl-7,.grid .xl-8,.grid .xl-9,.grid .xl-10,.grid .xl-11,.grid .xl-12,.grid .xxl-1,.grid .xxl-2,.grid .xxl-five,.grid .xxl-3,.grid .xxl-4,.grid .xxl-5,.grid .xxl-6,.grid .xxl-7,.grid .xxl-8,.grid .xxl-9,.grid .xxl-10,.grid .xxl-11,.grid .xxl-12 {float:none; width:auto;}  
+.center {
+  float:none;
+  margin:0 auto;
+  display:block;
+}
+.grid .center {
+  justify-self:center;
+  margin:auto;
+  grid-column:1 / -1;
+}
+.grid .grid {
+  padding:0;
+  width:100%;
+}
+#map {z-index:1;}/*
+ * Components CSS - v7 - 2020-09-30
+ * https://www.myresponsee.com
+ * Copyright 2020, Vision Design - graphic zoo
+ * Free to use under the MIT license.
+ * 
+ * Components CSS includes Tabs, Custom forms, Tooltips, Buttons, Timelines, Modals, Accordions
+*/
+/* Tabs */
+.tab-item {
+  background: none repeat scroll 0 0 #fff;
+  display: none;
+  padding: 1.25rem 0;
+}
+.tab-item.tab-active {
+  display: block;
+}
+.tab-content > .tab-label {
+  display: none;
+}
+.tab-nav > .tab-label {
+  float:left;
+}
+a.tab-label, a.tab-label:link, a.tab-label:visited, a.tab-label:hover {
+  background: none repeat scroll 0 0 #262626;
+  color: #fff;
+  margin-right: 1px;
+  padding: 0.625rem 1.25rem;
+  transition: background 0.20s linear 0s;
+  -o-transition: background 0.20s linear 0s;
+  -ms-transition: background 0.20s linear 0s;
+  -moz-transition: background 0.20s linear 0s;
+  -webkit-transition: background 0.20s linear 0s;
+}
+a.tab-label:hover,a.tab-label.active-btn {
+  background: none repeat scroll 0 0 #999;
+}
+.tab-label.active-btn {
+  cursor: default;
+}
+.tab-content {
+  text-align: left;
+}
+@media screen and (max-width:768px) {    
+  .tab-nav > .tab-label {
+    margin: 0.5px 0;
+    width: 100%;
+  }
+}
+/* Custom forms */
+form.customform input, form.customform select, form.customform textarea, form.customform button {
+ font-size:0.9rem;
+ font-family:inherit;
+ margin-bottom:1.25rem;
+} 
+form.customform input, form.customform select {height: 2.7rem;}
+form.customform input, form.customform textarea, form.customform select { 
+ background: none repeat scroll 0 0 #F5F5F5;
+ transition: background 0.20s linear 0s;
+ -o-transition: background 0.20s linear 0s;
+ -ms-transition: background 0.20s linear 0s;
+ -moz-transition: background 0.20s linear 0s;
+ -webkit-transition: background 0.20s linear 0s;
+}
+form.customform input:hover, form.customform textarea:hover, form.customform select:hover, form.customform input:focus, form.customform textarea:focus, form.customform select:focus {background: none repeat scroll 0 0 #fff;}
+form.customform input, form.customform textarea, form.customform select {
+ background: none repeat scroll 0 0 #F5F5F5;
+ border: 1px solid #E0E0E0;
+ padding: 0.625rem;
+ width: 100%;
+}
+form.customform input[type="file"] {
+ border: 1px solid #E0E0E0;
+ height: auto;
+ max-height: 2.7rem;
+ min-height: 2.7rem;
+ padding: 0.4rem;
+ width: 100%;
+}
+form.customform input[type="radio"], form.customform input[type="checkbox"] {
+ margin-right: 0.625rem;
+ width:auto;
+ padding:0;
+ height:auto;
+}
+form.customform option {padding: 0.625rem;}
+form.customform select[multiple="multiple"] {height: auto;}
+form.customform button {
+ width: 100%;
+ background: none repeat scroll 0 0 #152732;
+ border: 0 none;
+ color: #fff;
+ height: 2.7rem;
+ padding: 0.625rem;
+ cursor:pointer;
+ width: 100%;
+ transition: background 0.20s linear 0s;
+ -o-transition: background 0.20s linear 0s;
+ -ms-transition: background 0.20s linear 0s;
+ -moz-transition: background 0.20s linear 0s;
+ -webkit-transition: background 0.20s linear 0s;
+}
+/* Tooltip */
+a.tooltip-container,.tooltip-container {
+  border-bottom:1px dotted;
+  border-bottom-color: color;
+  cursor: help;
+  font-weight: 600;
+}
+a .tooltip-content,.tooltip-content {
+  background: #152732 none repeat scroll 0 0;
+  color: #fff!important;
+  border-radius: 3px;
+  display: none;
+  font-size: 0.8rem;
+  font-weight: normal;
+  line-height: 1.3rem;
+  margin-top: -1.25rem;
+  max-width: 300px;
+  padding: 0.625rem;
+  position: absolute;
+  z-index: 10;
+}
+.tooltip-content::after {
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 7px solid #152732;
+  bottom: -5px;
+  clear: both;
+  content: "";
+  height: 0;
+  left: 50%;
+  margin-left: -5px;
+  position: absolute;
+  width: 0;
+}
+a.tooltip-content.tooltip-bottom,.tooltip-content.tooltip-bottom {
+  margin-top: 1.25rem;
+}
+.tooltip-content.tooltip-bottom::after {
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 0;
+  border-bottom: 7px solid #152732;
+  top: -5px;
+}
+/* Buttons */
+.button,a.button,a.button:link,a.button:active,a.button:visited {
+  background: #777 none repeat scroll 0 0;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.85rem;
+  padding: 0.825rem 1rem;
+  text-align: center;
+  transition: all 0.20s linear 0s;
+  -o-transition: all 0.20s linear 0s;
+  -ms-transition: all 0.20s linear 0s;
+  -moz-transition: all 0.20s linear 0s;
+  -webkit-transition: all 0.20s linear 0s;
+}
+.button.rounded-btn {
+  border-radius: 4px;
+}
+.button.rounded-full-btn {
+  border-radius: 100px;
+}
+.button:hover {
+  box-shadow: 0 0 10px 100px rgba(255,255,255,0.15) inset;
+  color: #fff;
+}
+.button.secondary-btn,a.button.secondary-btn,a.button.secondary-btn:link,a.button.secondary-btn:active,a.button.secondary-btn:visited {
+  background: #444 none repeat scroll 0 0;
+}
+.button.cancel-btn,a.button.cancel-btn,a.button.cancel-btn:link,a.button.cancel-btn:active,a.button.cancel-btn:visited {
+  background: #dc003a none repeat scroll 0 0;
+}
+.button.submit-btn,a.button.submit-btn,a.button.submit-btn:link,a.button.submit-btn:active,a.button.submit-btn:visited {
+  background: #b4bf04 none repeat scroll 0 0;
+}
+.button.reload-btn,a.button.reload-btn,a.button.reload-btn:link,a.button.reload-btn:active,a.button.reload-btn:visited {
+  background: #ff9800 none repeat scroll 0 0;
+}
+.button.disabled-btn {
+  cursor: not-allowed!important;
+  opacity: 0.2;
+}
+.button i {
+  background: rgba(0, 0, 0, 0.1) none repeat scroll 0 0;
+  border-radius: 27px;
+  color: #fff!important;
+  display: inline-block;
+  font-size: 0.8rem;
+  height: 27px;
+  line-height: 27px;
+  margin-right: 5px;
+  width: 27px;
+  transition: all 0.20s linear 0s;
+  -o-transition: all 0.20s linear 0s;
+  -ms-transition: all 0.20s linear 0s;
+  -moz-transition: all 0.20s linear 0s;
+  -webkit-transition: all 0.20s linear 0s;
+}
+.button:hover > i {
+  background: rgba(0, 0, 0, 0.06) none repeat scroll 0 0;
+}
+.grid .button {
+  width: 100%;
+}
+/* Accordion */
+.accordion-title { 
+  font-size: 1.1rem;
+  padding: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin: 5px 0;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  color: #152732;
+  background: #eee;
+}
+.accordion-content {
+  display: none;
+  padding: 15px;
+  border: 1px solid #eee;
+}
+.accordion-title::before {
+  content: "\f005";
+  font-family: "mfg";
+  margin-right: 10px;
+  font-size: 12px;
+  width: 17px;
+  height: 17px;
+  line-height: 15px;
+  text-align: center;
+  border-radius: 17px;
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  top: -1px;
+  border: 2px solid #fff;
+  transform: rotate(0deg);
+  transition:all 0.2s ease-in-out;
+  -moz-transition:all 0.2s ease-in-out;
+  -webkit-transition:all 0.2s ease-in-out;
+}
+.active-accordion-section > .accordion-title::before {
+  transform: rotate(180deg);
+}
+/* Modal */
+.modal {
+  display: none;
+  margin-top: -100%;    
+  background: #fff;
+  padding: 20px;
+  height: auto;
+  position: absolute;
+  z-index: 2;
+  transition:all 0.3s ease-in-out;
+  -moz-transition:all 0.3s ease-in-out;
+  -webkit-transition:all 0.3s ease-in-out;
+}
+.modal.active-modal {
+  margin-top: 0;
+  width: 100%;
+}
+.modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  clear: left;
+  overflow-x: hidden;
+  height: 100%;
+  overflow-y: auto;
+}
+.modal-content::after {
+  clear:both;
+  content: ".";
+  display:block;
+  height:0;
+  line-height:0;
+  overflow:hidden;
+  visibility:hidden;
+}
+.modal-wrap {
+  background: rgba(0,0,0,0.6);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;  
+  z-index: 1000;
+}
+body.modal-active {
+  overflow: hidden !important;
+}
+.modal-close-button, .modal-button  {
+  cursor: pointer;
+}
+.modal-close {
+  position: fixed;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.modal-close-icon i {
+  color: #ccc;
+  font-size: 17px;
+}
+.modal-close-icon {
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  cursor: pointer;
+}
+/* Timeline */
+.timeline-container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px 0;
+}
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: 4px;
+  background: #eeeeee;
+}
+@media only screen and (min-width: 1170px) {
+  .timeline-container::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+.timeline-block {
+  position: relative;
+  margin: 2rem 0;
+  clear: both;
+}
+.timeline-block:after {
+  clear:both;
+  content: ".";
+  display:block;
+  height:0;
+  line-height:0;
+  overflow:hidden;
+  visibility:hidden;
+}
+.timeline-block:first-child {
+  margin-top: 0;
+}
+.timeline-block:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 1170px) {
+  .timeline-block {
+    margin: 4em 0;
+  }
+  .timeline-block:first-child {
+    margin-top: 0;
+  }
+  .timeline-block:last-child {
+    margin-bottom: 0;
+  }
+}
+.timeline-icon {
+  background: #B4BF04;	
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+}
+.timeline-icon i {
+  color: #fff;
+  font-size: 1rem;
+}
+@media only screen and (min-width: 1141px) {
+  .timeline-icon {
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    margin-left: -30px;
+    line-height: 60px;
+  }
+  .timeline-icon i {
+    font-size: 2rem;
+  }
+}
+.timeline-content {
+  position: relative;
+  margin-left: 60px;
+  background: #f5f5f5;
+  border-radius: 0.25rem;
+  padding: 1em;
+  text-align: left;
+}
+.timeline-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.timeline-content .timeline-date {
+  display: inline-block;
+  float: left;
+  font-size: 1.5rem;
+  color: #333;
+}
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: 11px solid transparent;
+  border-right: 11px solid #f5f5f5;
+}
+.timeline-icon img {
+  top: 0px;
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
+}
+.timeline-icon {
+  overflow: hidden;
+}
+@media only screen and (min-width: 1141px) {
+  .timeline-content {
+    margin-left: 0;
+    padding: 15px;
+    width: 45%;
+    text-align: right;
+  }
+  .timeline-content .timeline-date {
+    position: absolute;
+    width: 100%;
+    left: 121%;
+    top: 0;
+    text-align: left;
+  }
+  .timeline-content::before {
+    left: 100%;
+    border-left: 11px solid #f5f5f5;
+    border-right: 0;
+  }
+  .timeline-block:nth-child(even) .timeline-content {
+    float: right;
+    text-align: left;
+  }
+  .timeline-block:nth-child(even) .timeline-content::before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: transparent;   
+    border-right: 11px solid #f5f5f5;
+  }
+  .timeline-block:nth-child(even) .timeline-content .timeline-date {
+    left: auto;
+    right: 121%;
+    text-align: right;
+  } 
+}a.white-btn {
+	border: 1px solid #fff;
+	border-radius: 3px;
+	color: #fff;
+	display: block;
+	font-size: 0.85em;
+	margin-top: 1.25em;
+	padding: 0.625em 1.25em;
+	transition: all 0.20s linear 0s;
+	-o-transition: all 0.20s linear 0s;
+	-ms-transition: all 0.20s linear 0s;
+	-moz-transition: all 0.20s linear 0s;
+	-webkit-transition: all 0.20s linear 0s;
+}
+a.white-btn:hover {
+	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.1);
+}
+a.color-btn, form.customform button.color-btn {
+	background: none;
+	border: 1px solid #001925;
+	border-radius: 3px;
+	color: #001925;
+	display: block;
+	font-size: 0.85em;
+	padding: 0.625em 1.25em;
+	transition: all 0.20s linear 0s;
+	-o-transition: all 0.20s linear 0s;
+	-ms-transition: all 0.20s linear 0s;
+	-moz-transition: all 0.20s linear 0s;
+	-webkit-transition: all 0.20s linear 0s;
+}
+a.color-btn:hover, form.customform button.color-btn:hover {
+	border: 1px solid #92c500;
+	color: #92c500;
+}
+#topbar {
+	background: none repeat scroll 0 0 #012232;
+	border-bottom: 1px solid #001925;
+	padding: 0.3125em 0;
+}
+#topbar p {
+	color: #fff;
+	font-size: 0.75em;
+	opacity: 0.5;
+	position: relative;
+	top: 2px;
+}
+#topbar p strong {
+	font-weight: 600;
+}
+#topbar i {
+	color: #ffffff;
+	font-size: 1.1em;
+	opacity: 0.5;
+	transition: all 0.20s linear 0s;
+	-o-transition: all 0.20s linear 0s;
+	-ms-transition: all 0.20s linear 0s;
+	-moz-transition: all 0.20s linear 0s;
+	-webkit-transition: all 0.20s linear 0s;
+}
+#topbar i:hover {
+	color: #92c500;
+	cursor: pointer;
+	opacity: 1;
+}
+nav {
+	background: none repeat scroll 0 0 #00283a;
+}
+header {
+	border-bottom: 4px solid rgba(0, 40, 58, 0.53);
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+}
+p.logo {
+	color: #fff;
+	font-size: 1.7em;
+	font-weight: 300;
+	position: relative;
+	text-transform: uppercase;
+	top: 17px;
+}
+p.logo strong {
+	font-weight: 700;
+}
+.top-nav li a {
+	border-top: 2px solid #00283a;
+	color: #fff;
+	font-size: 0.95em;
+	font-weight: 600;
+	padding: 2.1em 1.5em 2.5em;
+	text-transform: uppercase;
+	transition: all 0.20s linear 0s;
+	-o-transition: all 0.20s linear 0s;
+	-ms-transition: all 0.20s linear 0s;
+	-moz-transition: all 0.20s linear 0s;
+	-webkit-transition: all 0.20s linear 0s;
+}
+.top-nav li a:hover, .top-nav li.active-item a {
+	background: none repeat scroll 0 0 #00283a;
+	border-top: 2px solid #92c500;
+	color: #92c500;
+	position: relative;
+}
+#carousel .text {
+	position: absolute;
+	top: 40%;
+	z-index: 10;
+}
+.item {
+	overflow: hidden;
+	width: 100%;
+}
+.prev-arrow, .next-arrow {
+	background: none repeat scroll 0 0 #00283a;
+	cursor: pointer;
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	margin-right: 1px;
+	text-align: center;
+	width: 30px;
+}
+#carousel .text h2 {
+	background: none repeat scroll 0 0 rgba(146, 197, 0, 0.8);
+	color: #fff;
+	display: inline-block;
+	font-size: 2em;
+	font-weight: 300;
+	margin: 1px 0;
+	max-width: 600px;
+	padding: 10px 20px;
+	width: 100%;
+}
+#carousel .text p {
+	background: none repeat scroll 0 0 #00283a;
+	color: #fff;
+	max-width: 600px;
+	padding: 10px 20px;
+	width: 100%;
+}
+#carousel .owl-dots {
+	background: none repeat scroll 0 0 rgba(0, 40, 58, 0.53);
+	bottom: 0;
+	margin: 0;
+	padding: 0.625em 0;
+	position: absolute;
+	width: 100%;
+}
+.owl-carousel.owl-theme .owl-dot span {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border: 3px solid rgba(0, 40, 58, 0.57);
+	height: 18px;
+	margin: 0 0.3125em;
+	opacity: 1;
+	width: 18px;
+}
+.owl-carousel.owl-theme .owl-dot.active span, .owl-carousel.owl-theme .owl-dot:hover span {
+	background: none repeat scroll 0 0 #92c500;
+}
+#first-block {
+	background: none repeat scroll 0 0 #00283a;
+	padding: 3em 2em;
+	text-align: center;
+}
+#first-block h1 {
+	color: #fff;
+	font-size: 2em;
+	font-weight: 300;
+	margin-top: 0;
+}
+#first-block p {
+	color: #6c7c84;
+	font-size: 0.85em;
+}
+#features {
+	background: none repeat scroll 0 0 #fff;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+	padding: 6em 2em;
+	position: relative;
+	text-align: center;
+	z-index: 2;
+}
+#features i {
+	background: none repeat scroll 0 0 #92c500;
+	border-radius: 100px;
+	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3) inset;
+	color: #fff;
+	display: inline-block;
+	font-size: 2em;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	width: 100px;
+}
+#features h2 {
+	font-size: 1em;
+	font-weight: 600;
+	margin: 1.25em 0;
+	text-transform: uppercase;
+}
+#features p {
+	color: #777;
+	font-size: 0.85em;
+	line-height: 1.5em;
+}
+#about-us {
+	background: none repeat scroll 0 0 #00283a;
+	clear: both;
+}
+#about-us:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+#about-us article {
+	padding: 4em;
+}
+article h2 {
+	font-size: 4em;
+	font-weight: 900;
+	letter-spacing: -2px;
+	line-height: 0.9;
+	margin: 0 0 0.625em 0
+}
+article h1, article h2, article h3, article h4, article h5, article h6 {
+	color: #fff;
+}
+.media-container {
+  overflow: hidden;
+}
+.media-container video {
+  display: block;
+  height: 100%;
+  max-width: none;
+  min-width: 100%;
+  width: auto;
+}
+article p, article li {
+	color: #fff;
+	font-size: 0.85em;
+	opacity: 0.7;
+}
+article ul {
+	padding: 1.25em 0;
+}
+article ul li {
+	list-style-type: none;
+	margin: 0.625em 0;
+	padding: 0 0 0 1em;
+}
+article ul li:before {
+	background: #00283a none repeat scroll 0 0;
+	color: #fff;
+	content: "\f006";
+	display: inline-block;
+	font-family: "mfg";
+	font-size: 0.8em;
+	height: 20px;
+	line-height: 20px;
+	margin-left: -1em;
+	margin-right: 0.625em;
+	text-align: center;
+	width: 20px;
+}
+.about-us-icons i {
+	border: 2px solid #92c500;
+	border-radius: 100px;
+	color: #92c500;
+	display: block;
+	float: left;
+	font-size: 1.6em;
+	height: 60px;
+	line-height: 60px;
+	margin-right: 0.625em;
+	text-align: center;
+	width: 60px;
+}
+.about-us-icons {
+	display: block;
+	margin-top: 2em;
+}
+h2.section-title:after {
+	background: #dedede none repeat scroll 0 0;
+	content: "";
+	display: block;
+	height: 1px;
+	margin: 0.31225em auto 0;
+	position: relative;
+	width: 100px;
+}
+h2.section-title {
+	color: #dedede;
+	font-size: 3.8em;
+	font-weight: 700;
+	letter-spacing: -1px;
+	margin: 0 0 1.25em;
+	text-align: center;
+	text-transform: uppercase;
+}
+#our-work {
+	background: none repeat scroll 0 0 #fff;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+	padding: 6em 2em;
+	position: relative;
+	z-index: 2;
+}
+.tab-item {
+	background: #fff none repeat scroll 0 0;
+	margin-top: 1.25em;
+	padding: 1.25em 0;
+}
+.our-work-container {
+	display: block;
+	height: 100%;
+	position: relative;
+}
+.our-work-text {
+	background: #00283a none repeat scroll 0 0;
+	bottom: 0;
+	display: block;
+	left: 0;
+	opacity: 0;
+	padding: 1.25em;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	transition: opacity 0.20s linear 0s;
+	-o-transition: opacityd 0.20s linear 0s;
+	-ms-transition: opacity 0.20s linear 0s;
+	-moz-transition: opacity 0.20s linear 0s;
+	-webkit-transition: opacity 0.20s linear 0s;
+	width: 100%;
+}
+.our-work-container:hover > .our-work-text {
+	opacity: 1;
+}
+.our-work-text h4 {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 600;
+}
+.our-work-text p {
+	color: #fff;
+	font-size: 0.8em;
+	opacity: 0.7;
+}
+.tab-nav {
+	display: table;
+}
+a.tab-label, a.tab-label:link, a.tab-label:visited {
+	background: #00283a none repeat scroll 0 0;
+	color: #fff;
+	display: block;
+	font-size: 1em;
+	padding: 0.625em 1.25em;
+	transition: all 0.20s linear 0s;
+	-o-transition: all 0.20s linear 0s;
+	-ms-transition: all 0.20s linear 0s;
+	-moz-transition: all 0.20s linear 0s;
+	-webkit-transition: all 0.20s linear 0s;
+}
+a.tab-label:hover, a.tab-label.active-btn {
+	background: #92c500;
+	color: #fff;
+}
+#services {
+	background: #6f9600 none repeat scroll 0 0;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+	padding: 6em 2em;
+}
+#services h2 {
+	color: #fff;
+	margin: 0 0 1.25em;
+}
+#services h2.section-title:after {
+	background: #fff none repeat scroll 0 0;
+}
+#services i {
+	background: none repeat scroll 0 0 #fff;
+	border-radius: 80px;
+	color: #6f9600;
+	display: block;
+	float: left;
+	font-size: 1.8em;
+	height: 80px;
+	line-height: 80px;
+	margin-right: 0.625em;
+	text-align: center;
+	width: 80px;
+}
+.service-text {
+	display: table;
+	position: relative;
+}
+#services h3 {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+#services p {
+	color: #fff;
+	font-size: 0.8em;
+}
+#latest-news {
+	background: #f3f3f3 none repeat scroll 0 0;
+	box-shadow: 0px -10px 9px -11px rgba(0, 0, 0, 0.5);
+	padding: 6em 2em;
+	position: relative;
+	z-index: 3;
+}
+.news-date {
+	background: #6f9600 none repeat scroll 0 0;
+	clear: both;
+	color: #fff;
+	display: block;
+	float: none;
+	height: 130px;
+	padding: 0.625em 0;
+	text-align: center;
+	width: 100%;
+}
+.day {
+	font-size: 2.5em;
+	font-weight: 700;
+}
+.month, .year {
+	font-size: 0.85em;
+}
+.news-text {
+	background: #fff none repeat scroll 0 0;
+	border-bottom: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
+	border-top: 1px solid #e0e0e0;
+	height: 130px;
+	padding: 0.625em 1.25em;
+}
+.news-text p {
+	color: #777;
+	font-size: 0.85em;
+}
+#contact {
+	background: none repeat scroll 0 0 #fff;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+	padding: 6em 2em;
+	position: relative;
+	z-index: 2;
+}
+#contact input, #contact textarea {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border-radius: 3px;
+}
+form.customform button.color-btn {
+	height: auto;
+	margin-top: 0;
+}
+#contact h2 {
+	margin: 0 0 1.25em;
+}
+#contact h3 {
+	color: #92c500;
+	font-size: 1em;
+	font-weight: 700;
+	margin: 0 0 0.625em;
+	text-transform: uppercase;
+}
+#contact p {
+	font-size: 0.85em;
+	font-style: normal;
+	line-height: 2em;
+}
+#contact p strong {
+	font-weight: 700;
+}
+#contact i {
+	background: #e0e0e0 none repeat scroll 0 0;
+	border-radius: 30px;
+	color: #fff;
+	display: inline-block;
+	line-height: 26px;
+	margin: 0.625em;
+	text-align: center;
+	width: 26px;
+}
+#map-block {
+  filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="g"><feColorMatrix type="matrix" values="0.3 0.3 0.3 0 0 0.3 0.3 0.3 0 0 0.3 0.3 0.3 0 0 0 0 0 1 0"/></filter></svg>#g');
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);    
+  filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=1);
+}
+footer {
+	background: none repeat scroll 0 0 #00283a;
+	padding: 3.5em 0;
+}
+footer p, footer a:visited, footer a, footer a:hover {
+	color: #6c7c84;
+	font-size: 0.8em;
+}
+@media screen and (max-width: 768px) {
+  header {
+    position: relative;
+  }
+  #carousel .text {
+  	font-size: 0.8em;
+  	top: 20%;
+  }
+  .owl-controls.clickable {
+  	display: none!important;
+  }
+  .right {
+  	float: none;
+  }
+  .social.right {
+  	float: right;
+  }
+  #about-us article {
+  	padding: 4em 2.5em;
+  }
+  .news-text {
+  	height: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  #topbar {
+  	line-height: 1.625em;
+  	text-align: center;
+  }
+  .social.right {
+  	float: none;
+  }
+  h2.section-title {
+    font-size: 3em;
+    line-height: 1.1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .background-image {
+    background-position: center;
+  }
+  p.logo, p.nav-text {
+  	text-align: center;
+  }
+  p.logo {
+    top: 0;
+    height: 56px;
+  }
+}
+}
+
+*{box-sizing:border-box}
+body{font-family:'Inter','Sarabun',sans-serif;-webkit-font-smoothing:antialiased}
+#topbar{background:#012232;border-bottom:1px solid #001925;padding:.4em 0}
+#topbar p{color:#fff;font-size:.78em;opacity:.65;margin:0}
+#topbar p strong{color:#92c500;opacity:1}
+.social a{color:#fff;opacity:.5;margin-left:10px;font-size:1em;transition:all .2s;text-decoration:none}
+.social a:hover{opacity:1;color:#92c500}
+nav{background:#00283a}
+header{border-bottom:4px solid rgba(0,40,58,.53);position:fixed;width:100%;z-index:1000}
+p.logo{font-size:1.4em;font-weight:700;color:#fff;text-transform:uppercase;line-height:70px;margin:0;letter-spacing:.05em}
+p.logo strong{font-weight:900;color:#92c500}
+.top-nav ul{list-style:none;margin:0;padding:0}
+.top-nav li{display:inline-block}
+.top-nav li a{display:block;color:#fff;font-size:.8em;font-weight:600;padding:1.6em 1em;text-transform:uppercase;letter-spacing:.06em;border-top:3px solid transparent;transition:all .2s;text-decoration:none}
+.top-nav li a:hover,.top-nav li.active-item a{border-top-color:#92c500;color:#92c500}
+.mobile-menu-btn{display:none;background:#92c500;border:none;color:#001c2a;padding:10px 14px;cursor:pointer;font-size:1em;font-weight:700}
+h2.section-title{font-size:2em;font-weight:800;color:#00283a;text-align:center;margin:0 0 1em;letter-spacing:-1px;text-transform:uppercase}
+h2.section-title::after{content:'';display:block;width:50px;height:4px;background:#92c500;margin:.4em auto 0;border-radius:2px}
+h2.section-title.light{color:#fff}
+h2.section-title.light::after{background:#fff}
+
+/* ── HERO strip ── */
+.page-hero{background:linear-gradient(135deg,#001c2a 0%,#00283a 100%);padding:5.5em 2em 2em;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(146,197,0,.025) 40px,rgba(146,197,0,.025) 80px)}
+.page-hero-inner{position:relative;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1em}
+.page-hero-badge{display:inline-block;font-size:.7em;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.35em 1em;border-radius:50px;margin-bottom:.8em}
+.page-hero h1{color:#fff;font-size:2.6em;font-weight:900;margin:0 0 .2em;letter-spacing:-2px;line-height:1}
+.page-hero p{color:rgba(255,255,255,.55);font-size:.9em;line-height:1.6;max-width:500px}
+
+/* ── STATS BAR ── */
+.stats-band{display:flex;background:#012232;border-bottom:1px solid rgba(255,255,255,.07)}
+.sband-item{flex:1;text-align:center;padding:.9em .5em;border-right:1px solid rgba(255,255,255,.07)}
+.sband-item:last-child{border-right:none}
+.sband-num{display:block;font-size:1.7em;font-weight:800;line-height:1;letter-spacing:-1px}
+.sband-lbl{display:block;font-size:.6em;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.08em;margin-top:.2em}
+
+/* ── FILTER CONTROLS ── */
+.ctrl-bar{background:#00283a;padding:.85em 1.5em;display:flex;align-items:center;gap:.8em;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.08)}
+.ctrl-bar label{color:rgba(255,255,255,.5);font-size:.75em;font-weight:600;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+.filter-group{display:flex;gap:.4em;flex-wrap:wrap}
+.fbtn{padding:.38em .9em;border-radius:50px;border:1px solid rgba(255,255,255,.18);background:transparent;color:rgba(255,255,255,.6);font-size:.75em;font-weight:600;cursor:pointer;transition:all .2s;font-family:'Inter','Sarabun',sans-serif;letter-spacing:.02em}
+.fbtn:hover{border-color:#92c500;color:#92c500}
+.fbtn.active{background:#92c500;border-color:#92c500;color:#001c2a;font-weight:700}
+
+/* Province filter */
+.prov-bar{background:#001520;padding:.6em 1.5em;display:flex;align-items:center;gap:.5em;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.06)}
+.prov-bar span{color:rgba(255,255,255,.35);font-size:.7em;font-weight:600;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;margin-right:.3em}
+.pbtn{padding:.28em .75em;border-radius:50px;border:1px solid rgba(255,255,255,.12);background:transparent;color:rgba(255,255,255,.5);font-size:.7em;font-weight:600;cursor:pointer;transition:all .18s;font-family:'Inter','Sarabun',sans-serif}
+.pbtn:hover{border-color:#92c500;color:#92c500}
+.pbtn.pactive{background:rgba(146,197,0,.15);border-color:#92c500;color:#92c500;font-weight:700}
+
+/* Search */
+.search-wrap{margin-left:auto;position:relative}
+.search-wrap input{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:50px;padding:.45em 1em .45em 2em;color:#fff;font-family:'Inter','Sarabun',sans-serif;font-size:.78em;outline:none;width:210px;transition:all .2s}
+.search-wrap input::placeholder{color:rgba(255,255,255,.3)}
+.search-wrap input:focus{border-color:#92c500;background:rgba(255,255,255,.1)}
+.search-wrap i{position:absolute;left:.75em;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.35);font-size:.78em}
+
+/* Result count */
+.result-count{padding:.5em 1.5em;background:#011825;font-size:.75em;color:rgba(255,255,255,.4);border-bottom:1px solid rgba(255,255,255,.05)}
+.result-count strong{color:#92c500}
+
+/* ── MAP LAYOUT ── */
+#map-layout{display:flex;height:560px;width:100%}
+#sidebar{width:300px;flex-shrink:0;background:#fff;border-right:1px solid #eaeaea;display:flex;flex-direction:column;overflow:hidden;transition:width .3s ease}
+#sidebar.collapsed{width:0}
+.branch-list{overflow-y:auto;flex:1}
+.branch-list::-webkit-scrollbar{width:3px}
+.branch-list::-webkit-scrollbar-thumb{background:#ddd;border-radius:2px}
+.branch-item{padding:11px 14px;border-bottom:1px solid #f3f3f3;cursor:pointer;transition:background .15s;display:flex;gap:9px;align-items:flex-start}
+.branch-item:hover{background:#fafafa}
+.branch-item.active{background:#f0f7e6;border-left:3px solid #92c500}
+.bi-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:4px}
+.bi-info{flex:1;min-width:0}
+.bi-name{font-size:12px;font-weight:700;color:#001c2a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:2px;letter-spacing:-.2px}
+.bi-meta{font-size:10.5px;color:#aaa;display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.bi-tag{background:#f3f3f3;border-radius:3px;padding:1px 5px;font-size:9.5px;color:#777;font-weight:600;letter-spacing:.02em}
+.bi-nav{display:inline-flex;align-items:center;gap:3px;color:#92c500;font-size:9.5px;font-weight:700;text-decoration:none;padding:2px 6px;border:1px solid #92c500;border-radius:3px;transition:all .15s}
+.bi-nav:hover{background:#92c500;color:#fff}
+#leafmap{flex:1;z-index:1;min-width:0}
+.map-wrapper{position:relative;flex:1;display:flex}
+.toggle-panel{position:absolute;z-index:500;background:#00283a;color:#fff;border:none;width:20px;height:48px;cursor:pointer;font-size:9px;border-radius:0 4px 4px 0;top:50%;transform:translateY(-50%);display:flex;align-items:center;justify-content:center;transition:background .2s}
+.toggle-panel:hover{background:#92c500;color:#001c2a}
+
+/* ── DETAIL STRIP ── */
+#detail-strip{background:#001c2a;padding:.8em 1.5em;display:none;align-items:center;gap:1.2em;border-top:3px solid #92c500}
+#detail-strip.show{display:flex}
+.ds-badge{font-size:.68em;font-weight:800;padding:.3em .8em;border-radius:50px;text-transform:uppercase;letter-spacing:.08em;flex-shrink:0}
+.ds-name{font-weight:700;font-size:.9em;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:-.2px}
+.ds-meta{font-size:.75em;color:rgba(255,255,255,.45)}
+.ds-gmaps{margin-left:auto;flex-shrink:0;display:inline-flex;align-items:center;gap:5px;background:#92c500;color:#001c2a;font-size:.75em;font-weight:800;padding:.5em 1.2em;border-radius:50px;text-decoration:none;transition:background .2s;letter-spacing:.02em}
+.ds-gmaps:hover{background:#7aaa00}
+.ds-close{background:none;border:none;color:rgba(255,255,255,.3);font-size:1.1em;cursor:pointer;padding:0 4px;margin-left:6px}
+.ds-close:hover{color:#fff}
+
+/* ── BRANCH CARDS ── */
+#branch-cards{background:#f4f4f4;padding:3.5em 1.5em}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.1em;margin-top:1.5em}
+.card{background:#fff;border:1px solid #eaeaea;border-radius:12px;padding:1.1em 1.2em;cursor:pointer;transition:all .2s;box-shadow:0 2px 8px rgba(0,0,0,.04);position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.card:hover{box-shadow:0 6px 24px rgba(0,28,42,.12);transform:translateY(-2px)}
+.card-top{display:flex;align-items:flex-start;gap:8px;margin-bottom:.7em}
+.card-badge{font-size:.63em;font-weight:800;padding:.25em .7em;border-radius:50px;text-transform:uppercase;letter-spacing:.05em;flex-shrink:0;white-space:nowrap}
+.card-name{font-size:.88em;font-weight:700;color:#001c2a;line-height:1.25;letter-spacing:-.2px}
+.card-address{font-size:.74em;color:#999;line-height:1.55;margin-bottom:.7em}
+.card-address i{width:12px;margin-right:3px}
+/* card data grid */
+.card-data{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.4em;margin-bottom:.7em}
+.cd-item{background:#f8f8f8;border-radius:6px;padding:.4em .5em;text-align:center}
+.cd-num{display:block;font-size:.95em;font-weight:800;color:#001c2a;line-height:1;letter-spacing:-.5px}
+.cd-lbl{display:block;font-size:.58em;color:#bbb;text-transform:uppercase;letter-spacing:.05em;margin-top:.15em}
+.card-footer{display:flex;align-items:center;justify-content:space-between;padding-top:.65em;border-top:1px solid #f3f3f3}
+.card-gmaps{display:inline-flex;align-items:center;gap:4px;background:#001c2a;color:#fff;font-size:.68em;font-weight:700;padding:.38em .9em;border-radius:50px;text-decoration:none;transition:background .2s;letter-spacing:.02em}
+.card-gmaps:hover{background:#92c500;color:#001c2a}
+
+/* ── OFFICE ── */
+#office-info{background:#00283a;padding:4em 2em}
+.office-grid{display:flex;gap:3em;flex-wrap:wrap;align-items:flex-start}
+.office-map-embed{flex:1 1 350px;border-radius:10px;overflow:hidden}
+.office-map-embed iframe{display:block;width:100%;height:280px;border:0}
+.office-details{flex:1 1 280px}
+.office-details h3{color:#92c500;font-size:1.1em;font-weight:800;margin-bottom:.6em;letter-spacing:-.3px}
+.od-row{display:flex;gap:10px;align-items:flex-start;margin-bottom:.6em}
+.od-row i{color:#92c500;margin-top:3px;flex-shrink:0;width:15px;font-size:.9em}
+.od-row span{color:rgba(255,255,255,.6);font-size:.82em;line-height:1.6}
+.office-gmaps-btn{display:inline-flex;align-items:center;gap:7px;background:#92c500;color:#001c2a;font-weight:800;font-size:.82em;padding:.65em 1.6em;border-radius:50px;text-decoration:none;margin-top:1em;transition:background .2s;letter-spacing:.03em}
+.office-gmaps-btn:hover{background:#7aaa00}
+
+/* ── FOOTER ── */
+footer{background:#011420;padding:2em 2em;border-top:2px solid #001c2a}
+.foot-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1em}
+footer p{color:rgba(255,255,255,.25);font-size:.75em;margin:0}
+.foot-logo{font-size:1em;font-weight:900;color:#fff;text-transform:uppercase;letter-spacing:.08em}
+.foot-logo span{color:#92c500}
+.foot-nav a{color:rgba(255,255,255,.35);font-size:.75em;text-decoration:none;margin-left:1.2em;transition:color .2s;font-weight:500}
+.foot-nav a:hover{color:#92c500}
+
+/* ── LEAFLET POPUP ── */
+.leaflet-popup-content-wrapper{border-radius:10px!important;box-shadow:0 8px 32px rgba(0,28,42,.2)!important;padding:0!important;overflow:hidden;border:1px solid #e8e8e8!important}
+.leaflet-popup-tip-container{display:none}
+.leaflet-popup-content{margin:0!important;width:260px!important}
+.leaflet-popup-close-button{top:7px!important;right:7px!important;color:#aaa!important;font-size:14px!important;z-index:10}
+.popup-head{background:#001c2a;padding:11px 13px 9px}
+.popup-badge{display:inline-block;font-size:8.5px;font-weight:800;padding:2px 7px;border-radius:50px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.popup-title{font-size:12.5px;font-weight:700;color:#fff;line-height:1.3;letter-spacing:-.2px}
+.popup-body{padding:10px 13px 12px}
+.popup-row{display:flex;gap:6px;margin-bottom:6px;font-size:11px}
+.popup-row i{color:#92c500;flex-shrink:0;margin-top:2px;width:12px;font-size:.85em}
+.popup-row span{color:#555;line-height:1.45}
+/* popup data row */
+.popup-data{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.3em;margin:.7em 0}
+.popup-data-item{background:#f8f8f8;border-radius:5px;padding:.35em .4em;text-align:center}
+.popup-data-item .n{display:block;font-size:.9em;font-weight:800;color:#001c2a;line-height:1}
+.popup-data-item .l{display:block;font-size:.55em;color:#bbb;text-transform:uppercase;letter-spacing:.04em;margin-top:.1em}
+.popup-gmaps{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:9px;padding:7px;border-radius:6px;background:#92c500;color:#001c2a;font-weight:800;font-size:10.5px;text-decoration:none;transition:background .2s;letter-spacing:.03em}
+.popup-gmaps:hover{background:#7aaa00}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  header{position:relative}
+  .page-hero{padding-top:3em}
+  #map-layout{flex-direction:column;height:auto}
+  #sidebar{width:100%!important;max-height:200px;border-right:none;border-bottom:1px solid #eee}
+  #leafmap{height:360px}
+  .ctrl-bar{flex-direction:column;align-items:flex-start;gap:.6em}
+  .search-wrap{margin-left:0;width:100%}
+  .search-wrap input{width:100%}
+  .toggle-panel{display:none}
+  .top-nav{display:none}
+  .mobile-menu-btn{display:block}
+  .office-grid{flex-direction:column}
+  .foot-inner{flex-direction:column;text-align:center}
+  .foot-nav{margin-top:.4em}
+  .foot-nav a{margin:0 .6em}
+  .stats-band{flex-wrap:wrap}
+  .sband-item{min-width:33%}
+  .cards-grid{grid-template-columns:1fr}
+}
+
+
+/* ── Phone info in card ── */
+.card-phone{display:flex;flex-direction:column;gap:.25em;margin-bottom:.6em;padding:.55em .7em;background:#f8f8f8;border-radius:7px;border:1px solid #f0f0f0}
+.card-phone a{display:inline-flex;align-items:center;gap:5px;font-size:.72em;color:#001c2a;text-decoration:none;font-weight:600;transition:color .15s}
+.card-phone a:hover{color:#92c500}
+.card-phone a i{width:13px;font-size:.85em;opacity:.6}
+.card-phone .ph-label{font-size:.6em;color:#bbb;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.1em;display:block}
+/* ── Popup phone ── */
+.popup-phone{display:flex;flex-direction:column;gap:.35em;margin:.6em 0;padding:.55em .6em;background:#f4f4f4;border-radius:6px}
+.popup-phone a{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:#001c2a;font-weight:600;text-decoration:none}
+.popup-phone a:hover{color:#92c500}
+.popup-phone a i{width:12px;font-size:.82em;opacity:.55}
+
+
+</style>
+</head>
+<body>
+<header>
+  <div id="topbar" class="hide-s hide-m">
+    <div class="line">
+      <div class="m-8 l-8"><p>บริษัท ไนน์ อีเกิล อินโนเวชั่น จำกัด &nbsp;|&nbsp; <strong>262/128 หมู่บ้านทรีโอร่มเกล้า เขตมีนบุรี กรุงเทพฯ</strong></p></div>
+      <div class="m-4 l-4"><div class="social right"><a><i class="fab fa-facebook"></i></a><a><i class="fab fa-line"></i></a><a><i class="fas fa-envelope"></i></a></div></div>
+    </div>
+  </div>
+  <nav>
+    <div class="line">
+      <div class="m-12 l-2"><p class="logo"><strong>Nine</strong> Eagle</p></div>
+      <div class="top-nav s-12 l-10">
+        <ul class="right">
+          <li class=""><a href="index.html">หน้าหลัก</a></li>
+          <li class=""><a href="market1.html">ตลาด 1</a></li>
+          <li class=""><a href="market2.html">ตลาด 2</a></li>
+          <li class="active-item"><a href="market3.html">ตลาด 3</a></li>
+          <li><a href="#office-info">สำนักงาน</a></li>
+          <li><a href="#login" style="background:rgba(146,197,0,.15);border:1px solid rgba(146,197,0,.3);border-radius:6px;margin:1.1em 0;padding:.4em 1em;color:#92c500;font-size:.78em"><i class="fas fa-sign-in-alt" style="margin-right:4px"></i>ใบงาน</a></li>
+        </ul>
+      </div>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div>
+      <div class="page-hero-badge" style="background:rgba(146,197,0,.15);border:1px solid rgba(146,197,0,.35);color:#92c500"><i class="fas fa-broom" style="margin-right:5px"></i>Big Cleaning 2026</div>
+      <h1>ตลาด 3 — ภาคตะวันออก</h1>
+      <p>CE 129 สาขา ครอบคลุม 8 จังหวัด — ชลบุรี(76) ระยอง(21) จันทบุรี(9) ฉะเชิงเทรา(8) ปราจีนบุรี(5) นครนายก(5) สระแก้ว(4) ตราด(1)</p>
+    </div>
+    <a href="index.html" style="display:inline-flex;align-items:center;gap:6px;padding:.45em 1.1em;border-radius:50px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.65);font-size:.78em;font-weight:600;text-decoration:none;align-self:flex-start;margin-top:.5em"><i class="fas fa-arrow-left"></i> หน้าหลัก</a>
+  </div>
+</div>
+
+<div class="stats-band"><div class="sband-item"><span class="sband-num" style="color:#00b894">129</span><span class="sband-lbl">CE สาขา</span></div><div class="sband-item"><span class="sband-num" style="color:#92c500">129</span><span class="sband-lbl">รวมสาขา</span></div><div class="sband-item"><span class="sband-num" style="color:#fff">8</span><span class="sband-lbl">จังหวัด</span></div><div class="sband-item"><span class="sband-num" style="color:rgba(255,255,255,.5)">พื้นที่</span><span class="sband-lbl">ภาคตะวันออก</span></div></div>
+
+<div class="ctrl-bar">
+  <label><i class="fas fa-filter" style="margin-right:5px"></i>Regional</label>
+  <div class="filter-group"><button class="fbtn active" id="fb-all" onclick="setFilter('all')">ทั้งหมด (129)</button><button class="fbtn" id="fb-ce" onclick="setFilter('ce')">🟢 CE (129)</button></div>
+  <div class="search-wrap"><i class="fas fa-search"></i><input type="text" id="searchInput" placeholder="ค้นหาสาขา, จังหวัด, อำเภอ..."></div>
+</div>
+
+<div class="prov-bar">
+  <span><i class="fas fa-map" style="margin-right:4px"></i>จังหวัด</span>
+  <div id="prov-btns" style="display:flex;flex-wrap:wrap;gap:.4em">
+    <button class="pbtn pactive" data-prov="all" onclick="setProvince('all')">ทั้งหมด</button>
+    <button class="pbtn" data-prov="จันทบุรี" onclick="setProvince('จันทบุรี')">จันทบุรี</button><button class="pbtn" data-prov="ฉะเชิงเทรา" onclick="setProvince('ฉะเชิงเทรา')">ฉะเชิงเทรา</button><button class="pbtn" data-prov="ชลบุรี" onclick="setProvince('ชลบุรี')">ชลบุรี</button><button class="pbtn" data-prov="ตราด" onclick="setProvince('ตราด')">ตราด</button><button class="pbtn" data-prov="นครนายก" onclick="setProvince('นครนายก')">นครนายก</button><button class="pbtn" data-prov="ปราจีนบุรี" onclick="setProvince('ปราจีนบุรี')">ปราจีนบุรี</button><button class="pbtn" data-prov="ระยอง" onclick="setProvince('ระยอง')">ระยอง</button><button class="pbtn" data-prov="สระแก้ว" onclick="setProvince('สระแก้ว')">สระแก้ว</button>
+  </div>
+</div>
+
+<div class="result-count" id="resultCount">แสดง <strong>129</strong> สาขา</div>
+
+<div id="map-layout">
+  <div id="sidebar"><div class="branch-list" id="branchList"></div></div>
+  <div class="map-wrapper">
+    <button class="toggle-panel" id="toggleBtn" onclick="toggleSidebar()">&#9664;</button>
+    <div id="leafmap"></div>
+  </div>
+</div>
+
+<div id="detail-strip">
+  <span class="ds-badge" id="dsBadge">—</span>
+  <div style="flex:1;min-width:0"><div class="ds-name" id="dsName">—</div><div class="ds-meta" id="dsMeta">—</div></div>
+  <a class="ds-gmaps" id="dsGmaps" href="#" target="_blank"><i class="fas fa-map-marker-alt"></i> นำทาง</a>
+  <button class="ds-close" onclick="document.getElementById('detail-strip').classList.remove('show')"><i class="fas fa-times"></i></button>
+</div>
+
+<section id="branch-cards">
+  <div class="line">
+    <h2 class="section-title">รายชื่อสาขา</h2>
+    <p style="text-align:center;color:#999;font-size:.85em;margin-top:-.5em;margin-bottom:.5em">คลิกการ์ดเพื่อดูตำแหน่งบนแผนที่ &nbsp;|&nbsp; กด <strong style="color:#92c500">นำทาง</strong> เพื่อเปิด Google Maps</p>
+    <div class="cards-grid" id="cardsGrid"></div>
+    <div style="text-align:center;margin-top:1.5em">
+      <button onclick="toggleCards()" id="cardsToggleBtn" style="background:#001c2a;color:#fff;border:none;padding:.65em 2em;border-radius:50px;cursor:pointer;font-family:Inter,Sarabun,sans-serif;font-size:.85em;font-weight:700;display:none;letter-spacing:.03em">
+        <i class="fas fa-chevron-down" id="cardsIcon"></i>&nbsp; แสดงทั้งหมด
+      </button>
+    </div>
+  </div>
+</section>
+
+<section id="office-info">
+  <div class="line">
+    <h2 class="section-title light">สำนักงานใหญ่</h2>
+    <div class="office-grid">
+      <div class="office-map-embed">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.5!2d100.7634!3d13.796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQ3JzQ1LjYiTiAxMDDCsDQ1JzQ4LjIiRQ!5e0!3m2!1sth!2sth!4v1" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="office-details">
+        <h3>บริษัท ไนน์ อีเกิล อินโนเวชั่น จำกัด</h3>
+        <div class="od-row"><i class="fas fa-map-marker-alt"></i><span>262/128 หมู่บ้านทรีโอร่มเกล้า แขวงมีนบุรี เขตมีนบุรี กรุงเทพมหานคร 10510</span></div>
+        <div class="od-row"><i class="fas fa-crosshairs"></i><span>พิกัด: 13.7960, 100.7634</span></div>
+        <div class="od-row"><i class="fas fa-clock"></i><span>จันทร์–ศุกร์ 08:30–16:30 น. / เสาร์ 08:30–15:00 น.</span></div>
+        <a class="office-gmaps-btn" href="https://www.google.com/maps/dir/?api=1&destination=13.7960,100.7634" target="_blank"><i class="fas fa-map-marker-alt"></i> นำทางมาสำนักงาน</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="line">
+    <div class="foot-inner">
+      <div><div class="foot-logo"><span>Nine</span> Eagle Innovation</div><p style="margin-top:.3em">บริษัท ไนน์ อีเกิล อินโนเวชั่น จำกัด — Big Cleaning 2026</p></div>
+      <div class="foot-nav"><a href="index.html">หน้าหลัก</a><a href="market1.html">ตลาด 1</a><a href="market2.html">ตลาด 2</a><a href="market3.html">ตลาด 3</a></div>
+      <p>© 2026 Nine Eagle Innovation Co., Ltd.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+var BRANCHES = [{"id": "NY", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "นครนายก", "branch": "สาขานครนายก", "subdistrict": "นครนายก", "district": "เมืองนครนายก", "province": "นครนายก", "postalcode": "26000", "area": "192.0", "booths": "2", "floors": "2.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "089-204-6328", "click2call": "037-631-007", "lat": 14.204196, "lng": 101.212344}, {"id": "PY", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "พัทยา", "branch": "สาขาพัทยา", "subdistrict": "นาเกลือ", "district": "บางละมุง", "province": "ชลบุรี", "postalcode": "20150", "area": "256.0", "booths": "2", "floors": "2.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "089-204-6541", "click2call": "033-009-324", "lat": 12.94239, "lng": 100.90349}, {"id": "CY", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "แยกบ้านบึง", "branch": "สาขาแยกบ้านบึง", "subdistrict": "บ้านสวน", "district": "เมืองชลบุรี", "province": "ชลบุรี", "postalcode": "20000", "area": "256.0", "booths": "1", "floors": "2.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "089-204-6580", "click2call": "033-009-348", "lat": 13.353643, "lng": 101.004723}, {"id": "XX", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ชากกระปอก (เครือสหพัฒน์)", "branch": "สาขาชากกระปอก (เครือสหพัฒน์)", "subdistrict": "หนองขาม", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20110", "area": "288.0", "booths": "2", "floors": "3.0", "hours": "จ-ศ 09.00 น. - 19.00 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "092-260-0850", "click2call": "033-674-839", "lat": 13.089076, "lng": 100.947994}, {"id": "GW", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "เนินพลับหวาน", "branch": "สาขาเนินพลับหวาน", "subdistrict": "หนองปรือ", "district": "บางละมุง", "province": "ชลบุรี", "postalcode": "20150", "area": "144.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-270-4505", "click2call": "033-009-602", "lat": 12.931686, "lng": 100.907239}, {"id": "GG", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "เขาตาโล", "branch": "สาขาเขาตาโล", "subdistrict": "หนองปรือ", "district": "บางละมุง", "province": "ชลบุรี", "postalcode": "20150", "area": "144.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-270-4506", "click2call": "033-009-604", "lat": 12.907739, "lng": 100.906781}, {"id": "OO", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ตลาดบูรพาซิตี้", "branch": "สาขาตลาดบูรพาซิตี้", "subdistrict": "บางวัว", "district": "บางปะกง", "province": "ฉะเชิงเทรา", "postalcode": "24130", "area": "204.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-213-8875", "click2call": "033-020-120", "lat": 13.542319, "lng": 100.972271}, {"id": "HB", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "สัตหีบ กม.10", "branch": "สาขาสัตหีบ กม.10", "subdistrict": "พลูตาหลวง", "district": "สัตหีบ", "province": "ชลบุรี", "postalcode": "20180", "area": "288.0", "booths": "2", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-213-8893", "click2call": "033-009-608", "lat": 12.690993, "lng": 100.977827}, {"id": "MB", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ศรีมหาโพธิ", "branch": "สาขาศรีมหาโพธิ", "subdistrict": "ศรีมหาโพธิ", "district": "ศรีมหาโพธิ", "province": "ปราจีนบุรี", "postalcode": "25140", "area": "120.0", "booths": "1", "floors": "2.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-421-3305", "click2call": "037-601-074", "lat": 13.75, "lng": 100.52}, {"id": "HR", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "พานทอง", "branch": "สาขาพานทอง", "subdistrict": "พานทอง", "district": "พานทอง", "province": "ชลบุรี", "postalcode": "20160", "area": "288.0", "booths": "2", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-421-3788", "click2call": "033-009-635", "lat": 13.47089, "lng": 101.09534}, {"id": "AX", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "บางพระ(ชลบุรี)", "branch": "สาขาบางพระ(ชลบุรี)", "subdistrict": "บางพระ", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20110", "area": "192.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-404-1136", "click2call": "033-009-637", "lat": 13.21445, "lng": 100.94284}, {"id": "EH", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ตลาดศุภฤกษ์", "branch": "สาขาตลาดศุภฤกษ์", "subdistrict": "สุรศักดิ์", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20110", "area": "96.0", "booths": "1", "floors": "2.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-213-8561", "click2call": "033-009-641", "lat": 13.146982, "lng": 100.951339}, {"id": "FH", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "นิคมฯปิ่นทอง", "branch": "สาขานิคมฯปิ่นทอง", "subdistrict": "หนองขาม", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20110", "area": "192.0", "booths": "1", "floors": "4.0", "hours": "จ-ศ 09.00 น. - 19.00 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-391-1997", "click2call": "033-009-662", "lat": 13.123905, "lng": 100.988597}, {"id": "FI", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ตลาดเมืองทอง", "branch": "สาขาตลาดเมืองทอง", "subdistrict": "บึง", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20230", "area": "269.5", "booths": "1", "floors": "3.5", "hours": "จ-ศ 09.00 น. - 19.00 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-391-1995", "click2call": "033-009-672", "lat": 13.088398, "lng": 100.985405}, {"id": "EW", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "สอยดาว", "branch": "สาขาสอยดาว", "subdistrict": "ปะตง", "district": "สอยดาว", "province": "จันทบุรี", "postalcode": "22180", "area": "192.0", "booths": "2", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-391-2122", "click2call": "039-601-018", "lat": 13.130188, "lng": 102.210881}, {"id": "FF", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "นาพร้าวศรีราชา", "branch": "สาขานาพร้าวศรีราชา", "subdistrict": "สุรศักดิ์", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20110", "area": "216.0", "booths": "1", "floors": "4.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-391-2120", "click2call": "033-009-675", "lat": 13.156268, "lng": 100.974729}, {"id": "FD", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ห้วยสะท้อน", "branch": "สาขาห้วยสะท้อน", "subdistrict": "ทุ่งเบญจา", "district": "ท่าใหม่", "province": "จันทบุรี", "postalcode": "22170", "area": "180.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-391-2124", "click2call": "039-601-027", "lat": 12.721368, "lng": 101.97099}, {"id": "FA", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "เกาะกลอย", "branch": "สาขาเกาะกลอย", "subdistrict": "เชิงเนิน", "district": "เมืองระยอง", "province": "ระยอง", "postalcode": "21000", "area": "144.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-391-2123", "click2call": "033-015-375", "lat": 12.699856, "lng": 101.272752}, {"id": "FP", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ปากร่วม", "branch": "สาขาปากร่วม", "subdistrict": "บ่อวิน", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20230", "area": "168.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-391-2127", "click2call": "033-009-680", "lat": 13.042168, "lng": 101.078296}, {"id": "FO", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "คลองกรำ", "branch": "สาขาคลองกรำ", "subdistrict": "ตาสิทธิ์", "district": "ปลวกแดง", "province": "ระยอง", "postalcode": "21140", "area": "168.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-213-8580", "click2call": "033-015-387", "lat": 13.023294, "lng": 101.20144}, {"id": "FW", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "อ่างศิลา", "branch": "สาขาอ่างศิลา", "subdistrict": "เสม็ด", "district": "เมืองชลบุรี", "province": "ชลบุรี", "postalcode": "20000", "area": "140.0", "booths": "1", "floors": "2.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-406-1709", "click2call": "033-009-682", "lat": 13.31928, "lng": 100.94793}, {"id": "FV", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ตลาดมาบตาพุด", "branch": "สาขาตลาดมาบตาพุด", "subdistrict": "มาบตาพุด", "district": "เมืองระยอง", "province": "ระยอง", "postalcode": "21150", "area": "140.0", "booths": "1", "floors": "2.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-406-1710", "click2call": "033-015-408", "lat": 12.719042, "lng": 101.168151}, {"id": "FC", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ขลุง", "branch": "สาขาขลุง", "subdistrict": "ขลุง", "district": "ขลุง", "province": "จันทบุรี", "postalcode": "22110", "area": "208.0", "booths": "1", "floors": "2.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-406-1712", "click2call": "039-601-028", "lat": 12.455055, "lng": 102.227357}, {"id": "FQ", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "วัดลุ่ม", "branch": "สาขาวัดลุ่ม", "subdistrict": "ท่าประดู่", "district": "เมืองระยอง", "province": "ระยอง", "postalcode": "21000", "area": "435.2", "booths": "2", "floors": "4.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-406-1711", "click2call": "033-015-410", "lat": 12.679469, "lng": 101.281681}, {"id": "HL", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "อ่าวอุดม", "branch": "สาขาอ่าวอุดม", "subdistrict": "ทุ่งสุขลา", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20230", "area": "144.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-406-1725", "click2call": "033-008-735", "lat": 13.113635, "lng": 100.916324}, {"id": "IQ", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ชัยพฤกษ์พัทยา", "branch": "สาขาชัยพฤกษ์พัทยา", "subdistrict": "หนองปรือ", "district": "บางละมุง", "province": "ชลบุรี", "postalcode": "20150", "area": "240.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-385-1250", "click2call": "033-009-951", "lat": 12.881885, "lng": 100.902444}, {"id": "IP", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "นิคมพัฒนา", "branch": "สาขานิคมพัฒนา", "subdistrict": "นิคมพัฒนา", "district": "นิคมพัฒนา", "province": "ระยอง", "postalcode": "21180", "area": "192.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "06-1385-5869", "click2call": "033-015-568", "lat": 12.832195, "lng": 101.1995}, {"id": "IU", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ถนนเทพประสิทธิ์", "branch": "สาขาถนนเทพประสิทธิ์", "subdistrict": "หนองปรือ", "district": "บางละมุง", "province": "ชลบุรี", "postalcode": "20150", "area": "192.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-387-0450", "click2call": "033-009-960", "lat": 12.904982, "lng": 100.872683}, {"id": "JC", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "คลองตำหรุ", "branch": "สาขาคลองตำหรุ", "subdistrict": "คลองตำหรุ", "district": "เมืองชลบุรี", "province": "ชลบุรี", "postalcode": "20000", "area": "207.6", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-389-0216", "click2call": "033-031-011", "lat": 13.418209, "lng": 100.999908}, {"id": "L8", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ตลาดสตาร์ ระยอง", "branch": "สาขาตลาดสตาร์ ระยอง", "subdistrict": "ท่าประดู่", "district": "เมืองระยอง", "province": "ระยอง", "postalcode": "21000", "area": "208.2", "booths": "1", "floors": "3.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "092-268-4580", "click2call": "033-015-448", "lat": 12.685185, "lng": 101.271813}, {"id": "0864", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ทุ่งนาเชย (จันทบุรี)", "branch": "สาขาทุ่งนาเชย (จันทบุรี)", "subdistrict": "ตลาด", "district": "เมืองจันทบุรี", "province": "จันทบุรี", "postalcode": "22000", "area": "193.0", "booths": "1", "floors": "4.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "065-509-0218", "click2call": "039-601-049", "lat": 12.600897, "lng": 102.104115}, {"id": "0896", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "นายายอาม", "branch": "สาขานายายอาม", "subdistrict": "นายายอาม", "district": "นายายอาม", "province": "จันทบุรี", "postalcode": "22160", "area": "128.0", "booths": "2", "floors": "1.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "065-502-4318", "click2call": "039-601-054", "lat": 12.779273, "lng": 101.823004}, {"id": "0906", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "บ้านนา", "branch": "สาขาบ้านนา", "subdistrict": "บ้านนา", "district": "บ้านนา", "province": "นครนายก", "postalcode": "26110", "area": "240.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "065-504-9604", "click2call": "037-631-024", "lat": 14.261369, "lng": 101.069349}, {"id": "0924", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ท่าช้าง นครนายก", "branch": "สาขาท่าช้าง นครนายก", "subdistrict": "ท่าช้าง", "district": "เมืองนครนายก", "province": "นครนายก", "postalcode": "26000", "area": "168.0", "booths": "1", "floors": "3.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-228-1519", "click2call": "037-631-034", "lat": 14.201227, "lng": 101.198791}, {"id": "0977", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "มิตรกมล", "branch": "สาขามิตรกมล", "subdistrict": "หนองปรือ", "district": "บางละมุง", "province": "ชลบุรี", "postalcode": "20150", "area": "187.2", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-421-5082", "click2call": "033-117-930", "lat": 12.932738, "lng": 100.938918}, {"id": "0978", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "โพธิสาร", "branch": "สาขาโพธิสาร", "subdistrict": "นาเกลือ", "district": "บางละมุง", "province": "ชลบุรี", "postalcode": "20150", "area": "192.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-421-6726", "click2call": "033-117-931", "lat": 12.956102, "lng": 100.89851}, {"id": "0979", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ตลาดวัฒนานุกิจ", "branch": "สาขาตลาดวัฒนานุกิจ", "subdistrict": "ทางเกวียน", "district": "แกลง", "province": "ระยอง", "postalcode": "21110", "area": "211.6", "booths": "1", "floors": "3.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-421-6949", "click2call": "033-015-450", "lat": 12.775719, "lng": 101.650662}, {"id": "0980", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "สวนศรีเมือง", "branch": "สาขาสวนศรีเมือง", "subdistrict": "เชิงเนิน", "district": "เมืองระยอง", "province": "ระยอง", "postalcode": "21000", "area": "192.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-421-7584", "click2call": "033-015-452", "lat": 12.66957, "lng": 101.267021}, {"id": "0982", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ถนนศรีโสธรตัดใหม่", "branch": "สาขาถนนศรีโสธรตัดใหม่", "subdistrict": "หน้าเมือง", "district": "เมืองฉะเชิงเทรา", "province": "ฉะเชิงเทรา", "postalcode": "24000", "area": "224.0", "booths": "1", "floors": "3.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-230-8771", "click2call": "033-021-350", "lat": 13.683663, "lng": 101.066187}, {"id": "0983", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "บ้านแลง", "branch": "สาขาบ้านแลง", "subdistrict": "เชิงเนิน", "district": "เมืองระยอง", "province": "ระยอง", "postalcode": "21000", "area": "112.0", "booths": "1", "floors": "2.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-230-8562", "click2call": "033-015-457", "lat": 12.685987, "lng": 101.300669}, {"id": "0987", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "บางเสร่", "branch": "สาขาบางเสร่", "subdistrict": "บางเสร่", "district": "สัตหีบ", "province": "ชลบุรี", "postalcode": "20250", "area": "73.5", "booths": "1", "floors": "2.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-231-3721", "click2call": "033-081-730", "lat": 12.761365, "lng": 100.898522}, {"id": "0989", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "พัทยาใต้ ซอย 17", "branch": "สาขาพัทยาใต้ ซอย 17", "subdistrict": "หนองปรือ", "district": "บางละมุง", "province": "ชลบุรี", "postalcode": "20150", "area": "208.8", "booths": "1", "floors": "4.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-231-4948", "click2call": "033-081-732", "lat": 12.915151, "lng": 100.87975}, {"id": "0991", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "บขส.ใหม่ ระยอง", "branch": "สาขาบขส.ใหม่ ระยอง", "subdistrict": "ทับมา", "district": "เมืองระยอง", "province": "ระยอง", "postalcode": "21000", "area": "163.6", "booths": "1", "floors": "2.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-231-5073", "click2call": "033-016-580", "lat": 12.698517, "lng": 101.218601}, {"id": "0992", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ตลาดไฟฟ้าเสม็ด", "branch": "สาขาตลาดไฟฟ้าเสม็ด", "subdistrict": "เสม็ด", "district": "เมืองชลบุรี", "province": "ชลบุรี", "postalcode": "20000", "area": "223.5", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-234-0025", "click2call": "033-081-734", "lat": 13.331341, "lng": 100.951836}, {"id": "0995", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ตลาดคุณแม่ละออ", "branch": "สาขาตลาดคุณแม่ละออ", "subdistrict": "หนองปรือ", "district": "บางละมุง", "province": "ชลบุรี", "postalcode": "20150", "area": "151.2", "booths": "1", "floors": "4.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "065-510-1277", "click2call": "033-081-735", "lat": 12.889876, "lng": 100.887378}, {"id": "0996", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ตลาดพรประเสริฐ", "branch": "สาขาตลาดพรประเสริฐ", "subdistrict": "แสนสุข", "district": "เมืองชลบุรี", "province": "ชลบุรี", "postalcode": "20130", "area": "108.3", "booths": "1", "floors": "2.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "065-510-1291", "click2call": "033-081-731", "lat": 13.277474, "lng": 100.956545}, {"id": "0997", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ถนนทุ่งสุขลา", "branch": "สาขาถนนทุ่งสุขลา", "subdistrict": "ทุ่งสุขลา", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20230", "area": "199.3", "booths": "1", "floors": "3.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "065-510-1315", "click2call": "033-081-733", "lat": 13.112522, "lng": 100.928795}, {"id": "0999", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "นิคมฯเกตเวย์", "branch": "สาขานิคมฯเกตเวย์", "subdistrict": "หัวสำโรง", "district": "แปลงยาว", "province": "ฉะเชิงเทรา", "postalcode": "24190", "area": "157.9", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-271-3361", "click2call": "033-021-086", "lat": 13.618961, "lng": 101.31206}, {"id": "1002", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ดอนหัวฬ่อ", "branch": "สาขาดอนหัวฬ่อ", "subdistrict": "ดอนหัวฬ่อ", "district": "เมืองชลบุรี", "province": "ชลบุรี", "postalcode": "20000", "area": "207.2", "booths": "1", "floors": "3.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-271-4674", "click2call": "033-085-592", "lat": 13.421044, "lng": 101.041387}, {"id": "1003", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ไร่กล้วย", "branch": "สาขาไร่กล้วย", "subdistrict": "สุรศักดิ์", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20110", "area": "428.4", "booths": "2", "floors": "3.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-271-8018", "click2call": "033-085-590", "lat": 13.15705, "lng": 100.95587}, {"id": "1004", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "บุญสัมพันธ์", "branch": "สาขาบุญสัมพันธ์", "subdistrict": "หนองปรือ", "district": "บางละมุง", "province": "ชลบุรี", "postalcode": "20150", "area": "320.0", "booths": "1", "floors": "4.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-271-7506", "click2call": "033-085-591", "lat": 12.922649, "lng": 100.912172}, {"id": "1005", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ถนนเก้ากิโล", "branch": "สาขาถนนเก้ากิโล", "subdistrict": "สุรศักดิ์", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20110", "area": "144.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-271-9057", "click2call": "033-085-593", "lat": 13.152608, "lng": 100.933534}, {"id": "1020", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "หน้าแม็คโครสระแก้ว", "branch": "สาขาหน้าแม็คโครสระแก้ว", "subdistrict": "สระแก้ว", "district": "เมืองสระแก้ว", "province": "สระแก้ว", "postalcode": "27000", "area": "192.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-416-2281", "click2call": "037-628-486", "lat": 13.810478, "lng": 102.078607}, {"id": "1027", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "เกาะขวาง", "branch": "สาขาเกาะขวาง", "subdistrict": "เกาะขวาง", "district": "เมืองจันทบุรี", "province": "จันทบุรี", "postalcode": "22000", "area": "170.8", "booths": "1", "floors": "3.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-416-2581", "click2call": "039-601-486", "lat": 12.561589, "lng": 102.115175}, {"id": "1036", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ห้วยปราบ", "branch": "สาขาห้วยปราบ", "subdistrict": "บ่อวิน", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20230", "area": "220.5", "booths": "1", "floors": "3.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-416-2820", "click2call": "033-038-452", "lat": 13.034597, "lng": 101.093597}, {"id": "1038", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "หนองแก", "branch": "สาขาหนองแก", "subdistrict": "บ้านบึง", "district": "บ้านบึง", "province": "ชลบุรี", "postalcode": "20170", "area": "167.2", "booths": "1", "floors": "2.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-416-2883", "click2call": "033-081-736", "lat": 13.341699105057879, "lng": 101.11816905055296}, {"id": "1059", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "สวนเสือ ศรีราชา", "branch": "สาขาสวนเสือ ศรีราชา", "subdistrict": "หนองขาม", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20110", "area": "312.0", "booths": "1", "floors": "4.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-402-6807", "click2call": "033-144-030", "lat": 13.148482, "lng": 101.004678}, {"id": "1060", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "เตาถ่าน (สัตหีบ)", "branch": "สาขาเตาถ่าน (สัตหีบ)", "subdistrict": "สัตหีบ", "district": "สัตหีบ", "province": "ชลบุรี", "postalcode": "20180", "area": "238.9", "booths": "1", "floors": "3.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-404-1454", "click2call": "033-144-031", "lat": 12.705939, "lng": 100.889261}, {"id": "1066", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ตลาดหนองสมอ", "branch": "สาขาตลาดหนองสมอ", "subdistrict": "ห้วยกะปิ", "district": "เมืองชลบุรี", "province": "ชลบุรี", "postalcode": "20000", "area": "151.2", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-209-5642", "click2call": "033-144-038", "lat": 13.318888, "lng": 100.969353}, {"id": "1068", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ตลาดลาว", "branch": "สาขาตลาดลาว", "subdistrict": "มาบตาพุด", "district": "เมืองระยอง", "province": "ระยอง", "postalcode": "21150", "area": "143.9", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-386-3696", "click2call": "033-683-571", "lat": 12.686592, "lng": 101.165372}, {"id": "1070", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "หนองไม้แดง (วัดอู่ตะเภา)", "branch": "สาขาหนองไม้แดง (วัดอู่ตะเภา)", "subdistrict": "หนองไม้แดง", "district": "เมืองชลบุรี", "province": "ชลบุรี", "postalcode": "20000", "area": "144.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-386-4336", "click2call": "033-144-037", "lat": 13.41099, "lng": 101.019609}, {"id": "1079", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "เขาขยาย", "branch": "สาขาเขาขยาย", "subdistrict": "บ่อวิน", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20230", "area": "213.7", "booths": "1", "floors": "3.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-386-4349", "click2call": "033-085-594", "lat": 13.058977, "lng": 101.046215}, {"id": "1090", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "พลับพลา", "branch": "สาขาพลับพลา", "subdistrict": "พลับพลา", "district": "เมืองจันทบุรี", "province": "จันทบุรี", "postalcode": "22000", "area": "175.5", "booths": "2", "floors": "1.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-386-4553", "click2call": "039-605-641", "lat": 12.619955, "lng": 102.146393}, {"id": "1093", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "บ่อยาง", "branch": "สาขาบ่อยาง", "subdistrict": "หนองขาม", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20110", "area": "144.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-386-5025", "click2call": "033-144-036", "lat": 13.105827, "lng": 100.96129}, {"id": "1101", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ตลาดโป่ง", "branch": "สาขาตลาดโป่ง", "subdistrict": "โป่ง", "district": "บางละมุง", "province": "ชลบุรี", "postalcode": "20150", "area": "156.6", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-386-5941", "click2call": "033-144-039", "lat": 12.950129, "lng": 100.98103}, {"id": "1103", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "สี่แยกท่าตูม", "branch": "สาขาสี่แยกท่าตูม", "subdistrict": "ท่าตูม", "district": "ศรีมหาโพธิ", "province": "ปราจีนบุรี", "postalcode": "25140", "area": "144.3", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-386-6062", "click2call": "037-601-386", "lat": 13.937149, "lng": 101.552584}, {"id": "1109", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "แยกเจ", "branch": "สาขาแยกเจ", "subdistrict": "สัตหีบ", "district": "สัตหีบ", "province": "ชลบุรี", "postalcode": "20180", "area": "163.8", "booths": "1", "floors": "3.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-386-6248", "click2call": "033-115-666", "lat": 12.727984, "lng": 100.89031}, {"id": "1209", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "องครักษ์", "branch": "สาขาองครักษ์", "subdistrict": "องครักษ์", "district": "องครักษ์", "province": "นครนายก", "postalcode": "26120", "area": "70.2", "booths": "1", "floors": "1.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-413-2586", "click2call": "037-631-086", "lat": 14.120313, "lng": 101.000888}, {"id": "1213", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ถนนพัทยาใต้", "branch": "สาขาถนนพัทยาใต้", "subdistrict": "หนองปรือ", "district": "บางละมุง", "province": "ชลบุรี", "postalcode": "20150", "area": "218.4", "booths": "1", "floors": "3.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "080-053-7893", "click2call": "033-085-596", "lat": 12.924109, "lng": 100.8797}, {"id": "1215", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ประแสร์", "branch": "สาขาประแสร์", "subdistrict": "ทุ่งควายกิน", "district": "แกลง", "province": "ระยอง", "postalcode": "21110", "area": "195.0", "booths": "1", "floors": "2.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "080-073-7542", "click2call": "033-016-583", "lat": 12.783584, "lng": 101.732127}, {"id": "1216", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "มิตรสัมพันธ์ (บางแสน)", "branch": "สาขามิตรสัมพันธ์ (บางแสน)", "subdistrict": "บ้านปึก", "district": "เมืองชลบุรี", "province": "ชลบุรี", "postalcode": "20130", "area": "131.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "080-053-7629", "click2call": "033-085-597", "lat": 13.299682, "lng": 100.934333}, {"id": "1219", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ทุ่งกลม-ตาลหมัน", "branch": "สาขาทุ่งกลม-ตาลหมัน", "subdistrict": "หนองปรือ", "district": "บางละมุง", "province": "ชลบุรี", "postalcode": "20150", "area": "117.0", "booths": "1", "floors": "2.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "080-053-7929", "click2call": "033-085-598", "lat": 12.895263, "lng": 100.905405}, {"id": "1226", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "หนองซ้ำซาก", "branch": "สาขาหนองซ้ำซาก", "subdistrict": "หนองซ้ำซาก", "district": "บ้านบึง", "province": "ชลบุรี", "postalcode": "20170", "area": "171.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "080-073-7545", "click2call": "033-117-943", "lat": 13.3388, "lng": 101.066935}, {"id": "1231", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ทับมา", "branch": "สาขาทับมา", "subdistrict": "ทับมา", "district": "เมืองระยอง", "province": "ระยอง", "postalcode": "21000", "area": "64.5", "booths": "1", "floors": "1.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "080-073-8548", "click2call": "033-016-584", "lat": 12.719166, "lng": 101.240716}, {"id": "1234", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "หนองแขวะ", "branch": "สาขาหนองแขวะ", "subdistrict": "บึง", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20230", "area": "105.8", "booths": "1", "floors": "2.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "080-073-8575", "click2call": "033-117-944", "lat": 13.049463, "lng": 101.003084}, {"id": "1268", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "หนองใหญ่ (ชลบุรี)", "branch": "สาขาหนองใหญ่ (ชลบุรี)", "subdistrict": "หนองใหญ่", "district": "หนองใหญ่", "province": "ชลบุรี", "postalcode": "20190", "area": "243.4", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "081-132-9438", "click2call": "033-117-936", "lat": 13.155349, "lng": 101.3767}, {"id": "1276", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "แสนตุ้ง", "branch": "สาขาแสนตุ้ง", "subdistrict": "แสนตุ้ง", "district": "เขาสมิง", "province": "ตราด", "postalcode": "23150", "area": "245.0", "booths": "1", "floors": "3.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "081-132-9434", "click2call": "039-611-386", "lat": 12.379108, "lng": 102.384169}, {"id": "1281", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "สี่แยกสนามกีฬาบ้านฉาง", "branch": "สาขาสี่แยกสนามกีฬาบ้านฉาง", "subdistrict": "บ้านฉาง", "district": "บ้านฉาง", "province": "ระยอง", "postalcode": "21130", "area": "163.8", "booths": "1", "floors": "3.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "081-132-9467", "click2call": "033-016-585", "lat": 12.714262, "lng": 101.056173}, {"id": "1290", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ละหารไร่", "branch": "สาขาละหารไร่", "subdistrict": "หนองบัว", "district": "บ้านค่าย", "province": "ระยอง", "postalcode": "21120", "area": "187.2", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "081-104-5041", "click2call": "033-016-586", "lat": 12.849634, "lng": 101.311835}, {"id": "1292", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "วัดสุทธาวาส (หนองปรือ)", "branch": "สาขาวัดสุทธาวาส (หนองปรือ)", "subdistrict": "หนองปรือ", "district": "บางละมุง", "province": "ชลบุรี", "postalcode": "20150", "area": "243.4", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "081-132-9425", "click2call": "033-117-935", "lat": 12.926405, "lng": 100.935198}, {"id": "1295", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ตลาดเดอะวอล์ค พานทอง", "branch": "สาขาตลาดเดอะวอล์ค พานทอง", "subdistrict": "มาบโป่ง", "district": "พานทอง", "province": "ชลบุรี", "postalcode": "20160", "area": "163.8", "booths": "1", "floors": "3.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "081-141-9746", "click2call": "033-094-841", "lat": 13.437497, "lng": 101.10675}, {"id": "1317", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ทุ่งขนาน", "branch": "สาขาทุ่งขนาน", "subdistrict": "ทุ่งขนาน", "district": "สอยดาว", "province": "จันทบุรี", "postalcode": "22180", "area": "150.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "080-076-1522", "click2call": "039-601-074", "lat": 13.235244, "lng": 102.277004}, {"id": "1352", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ชุมชนมโนรม", "branch": "สาขาชุมชนมโนรม", "subdistrict": "ทุ่งสุขลา", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20230", "area": "187.2", "booths": "1", "floors": "4.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "081-131-0879", "click2call": "033-117-938", "lat": 13.097987, "lng": 100.922148}, {"id": "1358", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ท้องคุ้ง", "branch": "สาขาท้องคุ้ง", "subdistrict": "นาป่า", "district": "เมืองชลบุรี", "province": "ชลบุรี", "postalcode": "20000", "area": "234.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "081-131-0890", "click2call": "033-117-939", "lat": 13.397109, "lng": 101.03154}, {"id": "1364", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "บ้านสวน 9", "branch": "สาขาบ้านสวน 9", "subdistrict": "บ้านสวน", "district": "เมืองชลบุรี", "province": "ชลบุรี", "postalcode": "20000", "area": "140.4", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "081-131-0901", "click2call": "033-674-845", "lat": 13.345586, "lng": 100.993424}, {"id": "1373", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ศรีมโหสถ", "branch": "สาขาศรีมโหสถ", "subdistrict": "โคกปีบ", "district": "ศรีมโหสถ", "province": "ปราจีนบุรี", "postalcode": "25190", "area": "146.2", "booths": "1", "floors": "2.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "081-131-0648", "click2call": "037-601-108", "lat": 13.892834, "lng": 101.403611}, {"id": "1399", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "นาเกลือ ซอย 14", "branch": "สาขานาเกลือ ซอย 14", "subdistrict": "นาเกลือ", "district": "บางละมุง", "province": "ชลบุรี", "postalcode": "20150", "area": "117.0", "booths": "1", "floors": "2.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "065-508-0061", "click2call": "033-674-846", "lat": 12.96542, "lng": 100.897843}, {"id": "1401", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "มะขาม", "branch": "สาขามะขาม", "subdistrict": "มะขาม", "district": "มะขาม", "province": "จันทบุรี", "postalcode": "22150", "area": "117.0", "booths": "1", "floors": "2.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "065-508-0213", "click2call": "039-601-079", "lat": 12.669248, "lng": 102.192308}, {"id": "1402", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ซอยกอไผ่", "branch": "สาขาซอยกอไผ่", "subdistrict": "หนองปรือ", "district": "บางละมุง", "province": "ชลบุรี", "postalcode": "20150", "area": "140.4", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "065-508-0229", "click2call": "033-674-847", "lat": 12.909328, "lng": 100.885577}, {"id": "1426", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "บ้านโพธิ์", "branch": "สาขาบ้านโพธิ์", "subdistrict": "บ้านโพธิ์", "district": "บ้านโพธิ์", "province": "ฉะเชิงเทรา", "postalcode": "24140", "area": "159.8", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "065-472-2364", "click2call": "033-020-163", "lat": 13.601956, "lng": 101.087714}, {"id": "1434", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "วัดตาลล้อม", "branch": "สาขาวัดตาลล้อม", "subdistrict": "แสนสุข", "district": "เมืองชลบุรี", "province": "ชลบุรี", "postalcode": "20130", "area": "140.4", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "065-472-4001", "click2call": "033-674-856", "lat": 13.270761, "lng": 100.939}, {"id": "1444", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "เนินกระปรอก", "branch": "สาขาเนินกระปรอก", "subdistrict": "บ้านฉาง", "district": "บ้านฉาง", "province": "ระยอง", "postalcode": "21130", "area": "144.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "065-472-4018", "click2call": "033-015-482", "lat": 12.735248, "lng": 101.085781}, {"id": "1446", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "หนองค้อ", "branch": "สาขาหนองค้อ", "subdistrict": "หนองขาม", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20110", "area": "175.5", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "065-472-4021", "click2call": "033-674-857", "lat": 13.128064, "lng": 101.029888}, {"id": "1451", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "หัวกุญแจ", "branch": "สาขาหัวกุญแจ", "subdistrict": "คลองกิ่ว", "district": "บ้านบึง", "province": "ชลบุรี", "postalcode": "20220", "area": "140.4", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "065-472-4026", "click2call": "033-674-859", "lat": 13.248072, "lng": 101.149787}, {"id": "1458", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "โคกสูง", "branch": "สาขาโคกสูง", "subdistrict": "โคกสูง", "district": "โคกสูง", "province": "สระแก้ว", "postalcode": "27120", "area": "119.3", "booths": "1", "floors": "2.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "065-472-7191", "click2call": "037-628-018", "lat": 13.839177, "lng": 102.624209}, {"id": "1474", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ชุมชนห้วยใหญ่", "branch": "สาขาชุมชนห้วยใหญ่", "subdistrict": "ห้วยใหญ่", "district": "บางละมุง", "province": "ชลบุรี", "postalcode": "20150", "area": "140.4", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "081-139-3592", "click2call": "033-674-867", "lat": 12.860797, "lng": 100.952597}, {"id": "1484", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "พัทยาเหนือ", "branch": "สาขาพัทยาเหนือ", "subdistrict": "นาเกลือ", "district": "บางละมุง", "province": "ชลบุรี", "postalcode": "20150", "area": "140.4", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "081-139-5189", "click2call": "033-674-870", "lat": 12.950385, "lng": 100.90635}, {"id": "1485", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ตลาดหนองแฟบ", "branch": "สาขาตลาดหนองแฟบ", "subdistrict": "หนองตำลึง", "district": "พานทอง", "province": "ชลบุรี", "postalcode": "20160", "area": "140.4", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "081-139-6170", "click2call": "033-674-871", "lat": 13.391913, "lng": 101.064361}, {"id": "1490", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "พิมพา", "branch": "สาขาพิมพา", "subdistrict": "พิมพา", "district": "บางปะกง", "province": "ฉะเชิงเทรา", "postalcode": "24130", "area": "51.8", "booths": "1", "floors": "1.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "081-139-6234", "click2call": "033-020-165", "lat": 13.596076, "lng": 100.928078}, {"id": "1501", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ไร่หนึ่ง-หนองขาม", "branch": "สาขาไร่หนึ่ง-หนองขาม", "subdistrict": "หนองขาม", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20110", "area": "187.2", "booths": "1", "floors": "4.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "081-139-7360", "click2call": "033-674-872", "lat": 13.103627, "lng": 100.969398}, {"id": "1507", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "หนองกะขะ", "branch": "สาขาหนองกะขะ", "subdistrict": "มาบโป่ง", "district": "พานทอง", "province": "ชลบุรี", "postalcode": "20160", "area": "210.6", "booths": "1", "floors": "4.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "081-139-7362", "click2call": "033-674-874", "lat": 13.420491, "lng": 101.096596}, {"id": "1510", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "วังใหม่", "branch": "สาขาวังใหม่", "subdistrict": "วังใหม่", "district": "วังสมบูรณ์", "province": "สระแก้ว", "postalcode": "27250", "area": "73.3", "booths": "1", "floors": "1.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "062-242-3363", "click2call": "037-628-019", "lat": 13.418898, "lng": 102.198754}, {"id": "1511", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ชุมชนหนองหว้า", "branch": "สาขาชุมชนหนองหว้า", "subdistrict": "บึง", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20230", "area": "140.4", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "062-242-3425", "click2call": "033-674-875", "lat": 13.075846, "lng": 101.019044}, {"id": "1529", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "แยกบ้านดอน", "branch": "สาขาแยกบ้านดอน", "subdistrict": "เชิงเนิน", "district": "เมืองระยอง", "province": "ระยอง", "postalcode": "21000", "area": "140.4", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "062-242-5639", "click2call": "033-015-490", "lat": 12.693038, "lng": 101.288521}, {"id": "1541", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ชุมชนบ่อนไก่ (สัตหีบ)", "branch": "สาขาชุมชนบ่อนไก่ (สัตหีบ)", "subdistrict": "สัตหีบ", "district": "สัตหีบ", "province": "ชลบุรี", "postalcode": "20180", "area": "140.4", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "062-242-7869", "click2call": "033-674-881", "lat": 12.679927, "lng": 100.903242}, {"id": "1563", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ตะพง", "branch": "สาขาตะพง", "subdistrict": "ตะพง", "district": "เมืองระยอง", "province": "ระยอง", "postalcode": "21000", "area": "48.0", "booths": "1", "floors": "1.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-023-8235", "click2call": "033-015-532", "lat": 12.64935, "lng": 101.343599}, {"id": "1567", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "เขาหินซ้อน", "branch": "สาขาเขาหินซ้อน", "subdistrict": "เขาหินซ้อน", "district": "พนมสารคาม", "province": "ฉะเชิงเทรา", "postalcode": "24120", "area": "183.9", "booths": "2", "floors": "2.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-023-8247", "click2call": "033-020-170", "lat": 13.768143, "lng": 101.52062}, {"id": "1569", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ตลาดพนมสารคาม", "branch": "สาขาตลาดพนมสารคาม", "subdistrict": "พนมสารคาม", "district": "พนมสารคาม", "province": "ฉะเชิงเทรา", "postalcode": "24120", "area": "264.7", "booths": "1", "floors": "3.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-023-8221", "click2call": "033-020-173", "lat": 13.74778, "lng": 101.35134}, {"id": "1584", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "แม่น้ำคู้ ซอย 3", "branch": "สาขาแม่น้ำคู้ ซอย 3", "subdistrict": "แม่น้ำคู้", "district": "ปลวกแดง", "province": "ระยอง", "postalcode": "21140", "area": "140.4", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "063-023-8287", "click2call": "033-015-541", "lat": 12.937287, "lng": 101.231371}, {"id": "1601", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ตลาดหนองปรือ (บางละมุง)", "branch": "สาขาตลาดหนองปรือ (บางละมุง)", "subdistrict": "หนองปรือ", "district": "บางละมุง", "province": "ชลบุรี", "postalcode": "20150", "area": "284.4", "booths": "2", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "080-061-3863", "click2call": "033-674-887", "lat": 12.944633, "lng": 100.938282}, {"id": "1602", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "แยกโพธิ์ตาก", "branch": "สาขาแยกโพธิ์ตาก", "subdistrict": "พนัสนิคม", "district": "พนัสนิคม", "province": "ชลบุรี", "postalcode": "20140", "area": "163.8", "booths": "1", "floors": "3.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "080-061-3864", "click2call": "033-674-891", "lat": 13.440801, "lng": 101.178663}, {"id": "1603", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ตลาดเก่าอ่างศิลา", "branch": "สาขาตลาดเก่าอ่างศิลา", "subdistrict": "อ่างศิลา", "district": "เมืองชลบุรี", "province": "ชลบุรี", "postalcode": "20000", "area": "196.6", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "080-061-3880", "click2call": "033-674-892", "lat": 13.336187, "lng": 100.930498}, {"id": "1618", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "หลวงพ่อปากแดง", "branch": "สาขาหลวงพ่อปากแดง", "subdistrict": "บ้านใหญ่", "district": "เมืองนครนายก", "province": "นครนายก", "postalcode": "26000", "area": "173.2", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "080-061-4179", "click2call": "037-631-037", "lat": 14.23184, "lng": 101.239954}, {"id": "1663", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "เทศบาลคลองตำหรุ", "branch": "สาขาเทศบาลคลองตำหรุ", "subdistrict": "คลองตำหรุ", "district": "เมืองชลบุรี", "province": "ชลบุรี", "postalcode": "20000", "area": "180.8", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "081-136-4741", "click2call": "033-674-893", "lat": 13.443074, "lng": 100.994904}, {"id": "1665", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ตลาดใหม่พันเสด็จ", "branch": "สาขาตลาดใหม่พันเสด็จ", "subdistrict": "บ่อวิน", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20230", "area": "179.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "08-1104-7662", "click2call": "033-674-895", "lat": 13.057202, "lng": 101.110784}, {"id": "1699", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "กรอกสมบูรณ์", "branch": "สาขากรอกสมบูรณ์", "subdistrict": "กรอกสมบูรณ์", "district": "ศรีมหาโพธิ", "province": "ปราจีนบุรี", "postalcode": "25140", "area": "133.0", "booths": "1", "floors": "2.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "06-5727-3071", "click2call": "037-601-064", "lat": 13.77356, "lng": 101.663826}, {"id": "1700", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "เขาไม้แก้ว", "branch": "สาขาเขาไม้แก้ว", "subdistrict": "เขาไม้แก้ว", "district": "บางละมุง", "province": "ชลบุรี", "postalcode": "20150", "area": "187.2", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "06-5727-3074", "click2call": "033-009-319", "lat": 12.953382, "lng": 101.04822}, {"id": "1707", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "โป่งตามุก", "branch": "สาขาโป่งตามุก", "subdistrict": "หนองหงษ์", "district": "พานทอง", "province": "ชลบุรี", "postalcode": "20160", "area": "206.5", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "080-062-2981", "click2call": "033-117-946", "lat": 13.396417, "lng": 101.117755}, {"id": "1727", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "บ้านสวน 11", "branch": "สาขาบ้านสวน 11", "subdistrict": "หนองข้างคอก", "district": "เมืองชลบุรี", "province": "ชลบุรี", "postalcode": "20000", "area": "308.3", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "080-069-6362", "click2call": "033-117-947", "lat": 13.338997, "lng": 101.00014}, {"id": "1739", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ตลาดล่างปลวกแดง", "branch": "สาขาตลาดล่างปลวกแดง", "subdistrict": "ปลวกแดง", "district": "ปลวกแดง", "province": "ระยอง", "postalcode": "21140", "area": "140.4", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "080-080-7140", "click2call": "033-015-621", "lat": 12.968736, "lng": 101.213331}, {"id": "1740", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "แปลงยาว", "branch": "สาขาแปลงยาว", "subdistrict": "แปลงยาว", "district": "แปลงยาว", "province": "ฉะเชิงเทรา", "postalcode": "24190", "area": "163.8", "booths": "1", "floors": "3.5", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "080-080-7141", "click2call": "033-020-181", "lat": 13.588792, "lng": 101.292928}, {"id": "1741", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "หมู่บ้านเดอะนารา", "branch": "สาขาหมู่บ้านเดอะนารา", "subdistrict": "ศรีมหาโพธิ", "district": "ศรีมหาโพธิ", "province": "ปราจีนบุรี", "postalcode": "25140", "area": "165.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "065-523-0564", "click2call": "037-601-159", "lat": 13.941957, "lng": 101.528853}, {"id": "1750", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "พานทอง-บ้านเซิด", "branch": "สาขาพานทอง-บ้านเซิด", "subdistrict": "พานทอง", "district": "พานทอง", "province": "ชลบุรี", "postalcode": "20160", "area": "192.5", "booths": "1", "floors": "3.5", "hours": "จ-อา 09.00 น. - 19.30 น.", "format": "Full Branch", "mobile": "065-505-2296", "click2call": "033-008-736", "lat": 13.463218, "lng": 101.101858}, {"id": "1752", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "สำนักท้อน", "branch": "สาขาสำนักท้อน", "subdistrict": "สำนักท้อน", "district": "บ้านฉาง", "province": "ระยอง", "postalcode": "21130", "area": "172.7", "booths": "2", "floors": "2.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "061-269-3454", "click2call": "033-015-652", "lat": 12.761346, "lng": 101.021864}, {"id": "1761", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "เคหะแหลมฉบัง", "branch": "สาขาเคหะแหลมฉบัง", "subdistrict": "ทุ่งสุขลา", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20230", "area": "140.4", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "065-505-2326", "click2call": "033-032-286", "lat": 13.07696, "lng": 100.933343}, {"id": "1763", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "สี่แยกชากค้อ", "branch": "สาขาสี่แยกชากค้อ", "subdistrict": "สุรศักดิ์", "district": "ศรีราชา", "province": "ชลบุรี", "postalcode": "20110", "area": "235.2", "booths": "1", "floors": "4.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "065-505-2322", "click2call": "033-008-766", "lat": 13.14649, "lng": 100.957736}, {"id": "1775", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "ตลาดทุ่งกราด", "branch": "สาขาตลาดทุ่งกราด", "subdistrict": "บางละมุง", "district": "บางละมุง", "province": "ชลบุรี", "postalcode": "20150", "area": "168.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "080-061-8248", "click2call": "033-008-243", "lat": 13.055862, "lng": 100.928594}, {"id": "1796", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "บ้านสวน 12", "branch": "สาขาบ้านสวน 12", "subdistrict": "บ้านสวน", "district": "เมืองชลบุรี", "province": "ชลบุรี", "postalcode": "20000", "area": "161.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "065-516-7810", "click2call": "033-112-888", "lat": 13.351521, "lng": 101.010731}, {"id": "1799", "market": "ตลาด 3 - CE", "regional": "CE", "name_th": "เขาน้อย อรัญประเทศ", "branch": "สาขาเขาน้อย อรัญประเทศ", "subdistrict": "บ้านใหม่หนองไทร", "district": "อรัญประเทศ", "province": "สระแก้ว", "postalcode": "27120", "area": "144.0", "booths": "1", "floors": "3.0", "hours": "จ-ศ 08.30 น. - 16.30 น. และ ส 08.30 น. - 15.00 น.", "format": "Full Branch", "mobile": "065-516-7826", "click2call": "037-628-097", "lat": 13.699988, "lng": 102.507551}];
+var COLORS   = {'CE':'#00b894'};
+var OFFICE_LAT = 13.796, OFFICE_LNG = 100.7634;
+var markers = [], selectedIdx = null;
+var currentFilter = 'all', currentProvince = 'all';
+var sidebarOpen = true, cardsExpanded = false;
+
+/* ── MAP ── */
+var map = L.map('leafmap', {
+  center: [13.2, 101.5],
+  zoom: 8,
+  zoomControl: false,
+  attributionControl: true
+});
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  maxZoom: 19, attribution: '&copy; OpenStreetMap &copy; CARTO'
+}).addTo(map);
+L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+/* ── ICONS ── */
+function dotIcon(color) {
+  return L.divIcon({
+    html: '<svg width="18" height="18"><circle cx="9" cy="9" r="5.5" fill="' + color + '" fill-opacity="0.9" stroke="#fff" stroke-width="1.5"/></svg>',
+    iconSize: [18,18], iconAnchor: [9,9], className: ''
+  });
+}
+function dotIconActive(color) {
+  return L.divIcon({
+    html: '<svg width="28" height="28"><circle cx="14" cy="14" r="12" fill="' + color + '" fill-opacity="0.15"/><circle cx="14" cy="14" r="7" fill="' + color + '" fill-opacity="0.4"/><circle cx="14" cy="14" r="5" fill="' + color + '" stroke="#fff" stroke-width="2"/></svg>',
+    iconSize: [28,28], iconAnchor: [14,14], className: ''
+  });
+}
+var officeIcon = L.divIcon({
+  html: '<svg width="44" height="44" viewBox="0 0 44 44"><defs><filter id="hg"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle cx="22" cy="22" r="20" fill="rgba(146,197,0,.18)" stroke="#92c500" stroke-width="2" filter="url(#hg)"/><polygon points="22,10 11,20 15,20 15,32 20,32 20,27 24,27 24,32 29,32 29,20 33,20" fill="#92c500" filter="url(#hg)"/><rect x="19" y="27" width="6" height="5" rx="0.5" fill="#fff"/></svg>',
+  iconSize: [44,44], iconAnchor: [22,22], className: ''
+});
+L.marker([OFFICE_LAT, OFFICE_LNG], { icon: officeIcon, zIndexOffset: 2000 })
+  .bindPopup('<div class="popup-head"><div class="popup-badge" style="background:rgba(146,197,0,.2);color:#92c500;border:1px solid rgba(146,197,0,.4)">🏠 สำนักงานใหญ่</div><div class="popup-title">บริษัท ไนน์ อีเกิล อินโนเวชั่น จำกัด</div></div><div class="popup-body"><div class="popup-row"><i class="fas fa-map-marker-alt"></i><span>262/128 หมู่บ้านทรีโอร่มเกล้า เขตมีนบุรี</span></div><a class="popup-gmaps" href="https://www.google.com/maps/dir/?api=1&destination=13.796,100.7634" target="_blank"><i class="fas fa-map-marker-alt"></i> นำทางมาสำนักงาน</a></div>', { maxWidth: 270 })
+  .addTo(map);
+
+/* ── BRANCH MARKERS ── */
+for (var i = 0; i < BRANCHES.length; i++) {
+  (function(idx) {
+    var b = BRANCHES[idx];
+    var color = COLORS[b.regional] || '#999';
+    var gm = 'https://www.google.com/maps/dir/?api=1&destination=' + b.lat + ',' + b.lng;
+    var mobLink  = b.mobile    && b.mobile    !== '-' ? '<a href="tel:' + b.mobile.replace(/-/g,'')    + '"><i class="fas fa-mobile-alt"></i> ' + b.mobile    + '</a>' : '';
+    var c2cLink  = b.click2call && b.click2call !== '-' ? '<a href="tel:' + b.click2call.replace(/-/g,'') + '"><i class="fas fa-phone"></i> '       + b.click2call + '</a>' : '';
+    var phoneHtml = (mobLink || c2cLink) ? '<div class="popup-phone">' + mobLink + c2cLink + '</div>' : '';
+    var popup = '<div class="popup-head">'
+      + '<div class="popup-badge" style="background:rgba(0,0,0,.25);color:' + color + ';border:1px solid ' + color + '50">' + b.market + '</div>'
+      + '<div class="popup-title">' + b.branch + '</div></div>'
+      + '<div class="popup-body">'
+      + '<div class="popup-row"><i class="fas fa-map-marker-alt"></i><span>' + b.subdistrict + ', ' + b.district + ', ' + b.province + '</span></div>'
+      + phoneHtml
+      + '<div class="popup-data">'
+      + '<div class="popup-data-item"><span class="n">' + b.booths + '</span><span class="l">คูหา</span></div>'
+      + '<div class="popup-data-item"><span class="n">' + b.floors + '</span><span class="l">ชั้น</span></div>'
+      + '<div class="popup-data-item"><span class="n">' + b.area   + '</span><span class="l">ต.ร.ม.</span></div>'
+      + '</div>'
+      + '<a class="popup-gmaps" href="' + gm + '" target="_blank"><i class="fas fa-map-marker-alt"></i> นำทาง Google Maps</a>'
+      + '</div>';
+    var mk = L.marker([b.lat, b.lng], { icon: dotIcon(color) });
+    mk.bindPopup(popup, { maxWidth: 280 });
+    mk.on('click', function() { selectBranch(idx, false); });
+    mk.addTo(map);
+    markers.push(mk);
+  })(i);
+}
+
+/* ── FILTER ── */
+function getFiltered() {
+  var q = document.getElementById('searchInput').value.toLowerCase();
+  var res = [];
+  for (var i = 0; i < BRANCHES.length; i++) {
+    var b = BRANCHES[i];
+    var mf = currentFilter === 'all' || b.regional.toLowerCase() === currentFilter;
+    var mp = currentProvince === 'all' || b.province === currentProvince;
+    var ms = !q || b.branch.toLowerCase().indexOf(q) >= 0
+          || b.province.toLowerCase().indexOf(q) >= 0
+          || b.district.toLowerCase().indexOf(q) >= 0
+          || b.subdistrict.toLowerCase().indexOf(q) >= 0;
+    if (mf && mp && ms) res.push({ b: b, origIdx: i });
+  }
+  return res;
+}
+
+function refresh() {
+  var items = getFiltered();
+  renderList(items);
+  renderCards(items);
+  var vis = {};
+  for (var k = 0; k < items.length; k++) vis[items[k].origIdx] = true;
+  for (var i = 0; i < markers.length; i++) {
+    if (vis[i])  { if (!map.hasLayer(markers[i])) markers[i].addTo(map); }
+    else         { if (map.hasLayer(markers[i]))  map.removeLayer(markers[i]); }
+  }
+}
+
+function rebuildProvButtons() {
+  var provCount = {};
+  for (var i = 0; i < BRANCHES.length; i++) {
+    var b = BRANCHES[i];
+    if (currentFilter === 'all' || b.regional.toLowerCase() === currentFilter) {
+      provCount[b.province] = (provCount[b.province] || 0) + 1;
+    }
+  }
+  var provs = Object.keys(provCount).sort(function(a, b) { return provCount[b] - provCount[a]; });
+  var container = document.getElementById('prov-btns');
+  container.innerHTML = '';
+  var allBtn = document.createElement('button');
+  allBtn.className = 'pbtn pactive';
+  allBtn.setAttribute('data-prov', 'all');
+  allBtn.textContent = 'ทั้งหมด';
+  allBtn.addEventListener('click', function() { setProvince('all'); });
+  container.appendChild(allBtn);
+  for (var k = 0; k < provs.length; k++) {
+    (function(p) {
+      var btn = document.createElement('button');
+      btn.className = 'pbtn';
+      btn.setAttribute('data-prov', p);
+      btn.textContent = p;
+      btn.addEventListener('click', function() { setProvince(p); });
+      container.appendChild(btn);
+    })(provs[k]);
+  }
+}
+
+function setFilter(f) {
+  currentFilter = f;
+  currentProvince = 'all';
+  document.querySelectorAll('.fbtn').forEach(function(b) { b.className = 'fbtn'; });
+  document.getElementById('fb-' + f).className = 'fbtn active';
+  rebuildProvButtons();
+  refresh();
+}
+
+function setProvince(p) {
+  currentProvince = p;
+  document.querySelectorAll('.pbtn').forEach(function(b) { b.className = 'pbtn'; });
+  var sel = document.querySelector('[data-prov="' + p + '"]');
+  if (sel) sel.className = 'pbtn pactive';
+  refresh();
+  if (p !== 'all') {
+    var pts = BRANCHES.filter(function(b) { return b.province === p; });
+    if (pts.length) {
+      var lats = pts.map(function(b) { return b.lat; });
+      var lngs = pts.map(function(b) { return b.lng; });
+      var clat = (Math.min.apply(null, lats) + Math.max.apply(null, lats)) / 2;
+      var clng = (Math.min.apply(null, lngs) + Math.max.apply(null, lngs)) / 2;
+      map.flyTo([clat, clng], 11, { animate: true, duration: 1 });
+    }
+  }
+}
+
+document.getElementById('searchInput').addEventListener('input', refresh);
+
+/* ── SELECT BRANCH ── */
+function selectBranch(idx, panTo) {
+  if (selectedIdx !== null) {
+    markers[selectedIdx].setIcon(dotIcon(COLORS[BRANCHES[selectedIdx].regional] || '#999'));
+    var pi = document.getElementById('item-' + selectedIdx);
+    if (pi) pi.className = 'branch-item';
+  }
+  selectedIdx = idx;
+  var b = BRANCHES[idx];
+  var color = COLORS[b.regional] || '#999';
+  markers[idx].setIcon(dotIconActive(color));
+  markers[idx].openPopup();
+  if (panTo) map.setView([b.lat, b.lng], Math.max(map.getZoom(), 14), { animate: true });
+  var el = document.getElementById('item-' + idx);
+  if (el) { el.className = 'branch-item active'; el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+  var gm = 'https://www.google.com/maps/dir/?api=1&destination=' + b.lat + ',' + b.lng;
+  var badge = document.getElementById('dsBadge');
+  badge.textContent = b.market;
+  badge.style.cssText = 'font-size:.68em;font-weight:800;padding:.3em .8em;border-radius:50px;text-transform:uppercase;flex-shrink:0;background:' + color + '20;color:' + color + ';border:1px solid ' + color + '60';
+  document.getElementById('dsName').textContent = b.branch;
+  document.getElementById('dsMeta').textContent = b.province + ' · ' + b.booths + ' คูหา · ' + b.floors + ' ชั้น · ' + b.area + ' ต.ร.ม.';
+  document.getElementById('dsGmaps').href = gm;
+  document.getElementById('detail-strip').classList.add('show');
+}
+
+/* ── SIDEBAR ── */
+function renderList(items) {
+  var list = document.getElementById('branchList');
+  document.getElementById('resultCount').innerHTML = 'แสดง <strong>' + items.length + '</strong> สาขา';
+  if (!items.length) { list.innerHTML = '<div style="padding:24px;text-align:center;color:#aaa;font-size:12px">ไม่พบสาขา</div>'; return; }
+  var h = '';
+  for (var k = 0; k < items.length; k++) {
+    var b = items[k].b, oi = items[k].origIdx;
+    var gm = 'https://www.google.com/maps/dir/?api=1&destination=' + b.lat + ',' + b.lng;
+    var color = COLORS[b.regional] || '#999';
+    h += '<div class="branch-item" id="item-' + oi + '" onclick="selectBranch(' + oi + ',true)">'
+      + '<div class="bi-dot" style="background:' + color + '"></div>'
+      + '<div class="bi-info"><div class="bi-name">' + b.branch + '</div>'
+      + '<div class="bi-meta"><span class="bi-tag">' + b.regional + '</span><span>' + b.province + '</span>'
+      + (b.mobile && b.mobile !== '-' ? '<span style="color:#777;font-size:9.5px"><i class="fas fa-phone" style="margin-right:2px;opacity:.5"></i>' + b.mobile + '</span>' : '')
+      + '<a class="bi-nav" href="' + gm + '" target="_blank" onclick="event.stopPropagation()"><i class="fas fa-location-arrow"></i> นำทาง</a>'
+      + '</div></div></div>';
+  }
+  list.innerHTML = h;
+}
+
+/* ── CARDS ── */
+function renderCards(items) {
+  var grid = document.getElementById('cardsGrid');
+  var show = cardsExpanded ? items : items.slice(0, 15);
+  var h = '';
+  for (var k = 0; k < show.length; k++) {
+    var b = show[k].b, oi = show[k].origIdx;
+    var gm = 'https://www.google.com/maps/dir/?api=1&destination=' + b.lat + ',' + b.lng;
+    var color = COLORS[b.regional] || '#999';
+    var mobLink = b.mobile    && b.mobile    !== '-' ? '<a href="tel:' + b.mobile.replace(/-/g,'')    + '" onclick="event.stopPropagation()" style="display:inline-flex;align-items:center;gap:4px;font-size:.7em;color:#444;text-decoration:none;font-weight:600"><i class="fas fa-mobile-alt" style="color:#92c500;width:12px"></i>' + b.mobile    + '</a>' : '';
+    var c2cLink = b.click2call && b.click2call !== '-' ? '<a href="tel:' + b.click2call.replace(/-/g,'') + '" onclick="event.stopPropagation()" style="display:inline-flex;align-items:center;gap:4px;font-size:.7em;color:#444;text-decoration:none;font-weight:600"><i class="fas fa-phone" style="color:#3a86ff;width:12px"></i>'       + b.click2call + '</a>' : '';
+    h += '<div class="card" onclick="goToCard(' + oi + ')" style="border-top-color:' + color + '">'
+      + '<div class="card-top"><span class="card-badge" style="background:' + color + '18;color:' + color + ';border:1px solid ' + color + '40">' + b.market + '</span><div class="card-name">' + b.branch + '</div></div>'
+      + '<div class="card-address"><div><i class="fas fa-map-marker-alt" style="color:#92c500;width:13px"></i>' + b.subdistrict + ', ' + b.district + '</div><div><i class="fas fa-city" style="color:#92c500;width:13px"></i>' + b.province + ' ' + b.postalcode + '</div></div>'
+      + '<div class="card-data"><div class="cd-item"><span class="cd-num">' + b.booths + '</span><span class="cd-lbl">คูหา</span></div><div class="cd-item"><span class="cd-num">' + b.floors + '</span><span class="cd-lbl">ชั้น</span></div><div class="cd-item"><span class="cd-num">' + b.area + '</span><span class="cd-lbl">ต.ร.ม.</span></div></div>'
+      + '<div class="card-phone">' + (mobLink ? '<div>' + mobLink + '</div>' : '') + (c2cLink ? '<div>' + c2cLink + '</div>' : '') + '</div>'
+      + '<div class="card-footer"><span style="font-size:.7em;color:#ccc"><i class="fas fa-clock" style="margin-right:3px"></i>' + b.format + '</span><a class="card-gmaps" href="' + gm + '" target="_blank" onclick="event.stopPropagation()"><i class="fas fa-location-arrow"></i> นำทาง</a></div>'
+      + '</div>';
+  }
+  grid.innerHTML = h;
+  document.getElementById('cardsToggleBtn').style.display = items.length > 15 ? 'inline-block' : 'none';
+}
+
+function toggleSidebar() {
+  sidebarOpen = !sidebarOpen;
+  var sb = document.getElementById('sidebar'), btn = document.getElementById('toggleBtn');
+  sb.classList.toggle('collapsed', !sidebarOpen);
+  btn.innerHTML = sidebarOpen ? '&#9664;' : '&#9654;';
+  setTimeout(function() { map.invalidateSize(); }, 320);
+}
+function goToCard(idx) {
+  document.getElementById('map-layout').scrollIntoView({ behavior: 'smooth' });
+  setTimeout(function() { selectBranch(idx, true); }, 400);
+}
+function toggleCards() {
+  cardsExpanded = !cardsExpanded;
+  document.getElementById('cardsToggleBtn').innerHTML = cardsExpanded
+    ? '<i class="fas fa-chevron-up"></i>&nbsp; แสดงน้อยลง'
+    : '<i class="fas fa-chevron-down"></i>&nbsp; แสดงทั้งหมด';
+  refresh();
+}
+function toggleMobileMenu() {
+  var nav = document.querySelector('.top-nav');
+  nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+}
+
+/* ── INIT ── */
+var initItems = BRANCHES.map(function(b, i) { return { b: b, origIdx: i }; });
+renderList(initItems);
+renderCards(initItems);
+</script>
+</body>
+</html>
